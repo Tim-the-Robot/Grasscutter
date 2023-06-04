@@ -19,29 +19,27 @@ public final class SceneTransToPointRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 point_id = 14;</code>
+     * <code>uint32 point_id = 12;</code>
      * @return The pointId.
      */
     int getPointId();
 
     /**
-     * <code>uint32 scene_id = 3;</code>
+     * <code>uint32 scene_id = 13;</code>
      * @return The sceneId.
      */
     int getSceneId();
 
     /**
-     * <code>int32 retcode = 8;</code>
+     * <code>int32 retcode = 3;</code>
      * @return The retcode.
      */
     int getRetcode();
   }
   /**
    * <pre>
-   * CmdId: 253
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
+   * CmdId: 268
+   * Obf: BCNGDFENAPI
    * </pre>
    *
    * Protobuf type {@code SceneTransToPointRsp}
@@ -90,17 +88,17 @@ public final class SceneTransToPointRspOuterClass {
               break;
             case 24: {
 
-              sceneId_ = input.readUInt32();
-              break;
-            }
-            case 64: {
-
               retcode_ = input.readInt32();
               break;
             }
-            case 112: {
+            case 96: {
 
               pointId_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              sceneId_ = input.readUInt32();
               break;
             }
             default: {
@@ -135,10 +133,10 @@ public final class SceneTransToPointRspOuterClass {
               emu.grasscutter.net.proto.SceneTransToPointRspOuterClass.SceneTransToPointRsp.class, emu.grasscutter.net.proto.SceneTransToPointRspOuterClass.SceneTransToPointRsp.Builder.class);
     }
 
-    public static final int POINT_ID_FIELD_NUMBER = 14;
+    public static final int POINT_ID_FIELD_NUMBER = 12;
     private int pointId_;
     /**
-     * <code>uint32 point_id = 14;</code>
+     * <code>uint32 point_id = 12;</code>
      * @return The pointId.
      */
     @java.lang.Override
@@ -146,10 +144,10 @@ public final class SceneTransToPointRspOuterClass {
       return pointId_;
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 3;
+    public static final int SCENE_ID_FIELD_NUMBER = 13;
     private int sceneId_;
     /**
-     * <code>uint32 scene_id = 3;</code>
+     * <code>uint32 scene_id = 13;</code>
      * @return The sceneId.
      */
     @java.lang.Override
@@ -157,10 +155,10 @@ public final class SceneTransToPointRspOuterClass {
       return sceneId_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 8;
+    public static final int RETCODE_FIELD_NUMBER = 3;
     private int retcode_;
     /**
-     * <code>int32 retcode = 8;</code>
+     * <code>int32 retcode = 3;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -182,14 +180,14 @@ public final class SceneTransToPointRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (sceneId_ != 0) {
-        output.writeUInt32(3, sceneId_);
-      }
       if (retcode_ != 0) {
-        output.writeInt32(8, retcode_);
+        output.writeInt32(3, retcode_);
       }
       if (pointId_ != 0) {
-        output.writeUInt32(14, pointId_);
+        output.writeUInt32(12, pointId_);
+      }
+      if (sceneId_ != 0) {
+        output.writeUInt32(13, sceneId_);
       }
       unknownFields.writeTo(output);
     }
@@ -200,17 +198,17 @@ public final class SceneTransToPointRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (sceneId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, sceneId_);
-      }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, retcode_);
+          .computeInt32Size(3, retcode_);
       }
       if (pointId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, pointId_);
+          .computeUInt32Size(12, pointId_);
+      }
+      if (sceneId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(13, sceneId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -347,10 +345,8 @@ public final class SceneTransToPointRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 253
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
+     * CmdId: 268
+     * Obf: BCNGDFENAPI
      * </pre>
      *
      * Protobuf type {@code SceneTransToPointRsp}
@@ -513,7 +509,7 @@ public final class SceneTransToPointRspOuterClass {
 
       private int pointId_ ;
       /**
-       * <code>uint32 point_id = 14;</code>
+       * <code>uint32 point_id = 12;</code>
        * @return The pointId.
        */
       @java.lang.Override
@@ -521,7 +517,7 @@ public final class SceneTransToPointRspOuterClass {
         return pointId_;
       }
       /**
-       * <code>uint32 point_id = 14;</code>
+       * <code>uint32 point_id = 12;</code>
        * @param value The pointId to set.
        * @return This builder for chaining.
        */
@@ -532,7 +528,7 @@ public final class SceneTransToPointRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 point_id = 14;</code>
+       * <code>uint32 point_id = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearPointId() {
@@ -544,7 +540,7 @@ public final class SceneTransToPointRspOuterClass {
 
       private int sceneId_ ;
       /**
-       * <code>uint32 scene_id = 3;</code>
+       * <code>uint32 scene_id = 13;</code>
        * @return The sceneId.
        */
       @java.lang.Override
@@ -552,7 +548,7 @@ public final class SceneTransToPointRspOuterClass {
         return sceneId_;
       }
       /**
-       * <code>uint32 scene_id = 3;</code>
+       * <code>uint32 scene_id = 13;</code>
        * @param value The sceneId to set.
        * @return This builder for chaining.
        */
@@ -563,7 +559,7 @@ public final class SceneTransToPointRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 scene_id = 3;</code>
+       * <code>uint32 scene_id = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearSceneId() {
@@ -575,7 +571,7 @@ public final class SceneTransToPointRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 8;</code>
+       * <code>int32 retcode = 3;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -583,7 +579,7 @@ public final class SceneTransToPointRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 8;</code>
+       * <code>int32 retcode = 3;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -594,7 +590,7 @@ public final class SceneTransToPointRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 8;</code>
+       * <code>int32 retcode = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -671,8 +667,8 @@ public final class SceneTransToPointRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032SceneTransToPointRsp.proto\"K\n\024SceneTra" +
-      "nsToPointRsp\022\020\n\010point_id\030\016 \001(\r\022\020\n\010scene_" +
-      "id\030\003 \001(\r\022\017\n\007retcode\030\010 \001(\005B\033\n\031emu.grasscu" +
+      "nsToPointRsp\022\020\n\010point_id\030\014 \001(\r\022\020\n\010scene_" +
+      "id\030\r \001(\r\022\017\n\007retcode\030\003 \001(\005B\033\n\031emu.grasscu" +
       "tter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

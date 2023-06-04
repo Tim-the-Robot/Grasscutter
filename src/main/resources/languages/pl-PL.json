@@ -1,7 +1,7 @@
 {
   "messages": {
     "game": {
-      "address_bind": "🇺🇸Game Server started at \u001b[1m\u001b[33m%s:%s\u001b[0m",
+      "address_bind": "Serwer gry został uruchomiony na \u001b[1m\u001b[33m%s:%s\u001b[0m",
       "port_bind": "Serwer gry został uruchomiony na porcie %s.",
       "connect": "Klient połączył się z %s.",
       "disconnect": "Klient rozłączył się z %s.",
@@ -9,7 +9,7 @@
       "command_error": "Błąd komendy: "
     },
     "dispatch": {
-      "address_bind": "🇺🇸[Dispatch] Dispatch server started at \u001b[1m\u001b[33m%s:%s\u001b[0m",
+      "address_bind": "[Dispatch] Serwer Dispatch został uruchomiony na \u001b[1m\u001b[33m%s:%s\u001b[0m",
       "port_bind": "[Dispatch] Serwer Dispatch został uruchomiony na porcie %s.",
       "request": "[Dispatch] Żądanie klienta %s (metoda %s): %s",
       "keystore": {
@@ -63,7 +63,10 @@
       "game_version": "Wersja gry: %s",
       "resources": {
         "loading": "Ładowanie zasobów...",
-        "finish": "Załadowano zasoby."
+        "finish": "Załadowano zasoby.",
+        "custom": "🇺🇸Find additional resources at: 'Anime-Game-Servers/CustomGCResources'.",
+        "missing_server": "🇺🇸To fully use questing, it is recommended to add the 'Server' folder.",
+        "missing_scenes": "🇺🇸To fully use questing, it is recommended to add the 'ScriptSceneData' folder."
       }
     }
   },
@@ -84,6 +87,7 @@
         "artifactId": "Błędne ID artefaktu.",
         "avatarId": "Błędne ID postaci.",
         "avatarLevel": "Błędny poziom postaci.",
+        "cfgId": "🇺🇸Invalid cfg ID.",
         "entityId": "Błędne ID obiektu.",
         "itemId": "Błędne ID przedmiotu.",
         "itemLevel": "Błędny poziom przedmiotu.",
@@ -124,6 +128,21 @@
       "no_account": "Nie znaleziono konta.",
       "description": "Twórz lub usuń konta."
     },
+    "achievement": {
+      "success": {
+        "grant": "🇺🇸Granted the achievement to %s.",
+        "revoke": "🇺🇸Revoked the achievement from %s.",
+        "progress": "🇺🇸Set progress of %s's achievement(id: %s) to %s.",
+        "grantall": "🇺🇸Granted %s achievement(s) to %s.",
+        "revokeall": "🇺🇸Revoked %s achievement(s) from %s."
+      },
+      "fail": {
+        "achievement_not_found": "🇺🇸Achievement not found.",
+        "already_achieved": "🇺🇸%s has already achieved the achievement.",
+        "not_yet_achieved": "🇺🇸%s hasn't achieved the achievement yet."
+      },
+      "description": "🇺🇸Grant, Revoke or Progress achievements."
+    },
     "announce": {
       "send_success": "Ogłoszenie zostało pomyślnie wysłane. Możesz je odwołać używając \"announce revoke %s\".",
       "refresh_success": "Odświeżono konfigurację ogłoszeń (w sumie jest ich %s).",
@@ -150,6 +169,10 @@
       "not_found_error": "Podane ID lochu jest nieprawidłowe.",
       "in_dungeon_error": "Wskazany gracz już jest w tym lochu.",
       "description": "Zmień loch, w którym ma się znajdować wskazany gracz."
+    },
+    "entity": {
+      "description": "🇺🇸Modify an existing entity's properties",
+      "not_found_error": "🇺🇸Entity does not exist"
     },
     "give": {
       "usage_relic": "give <ID reliktu> [ID pierwszego przedmiotu] [<ID drugiego przedmiotu>[, <ile razy je połączyć>]]... [lv<poziom od 0 do 20>]",
@@ -207,15 +230,40 @@
       "description": "Dodaj lub usuń uprawnienia podanego gracza."
     },
     "position": {
-      "success": "Koordynaty: (%s, %s, %s).\nID sceny: %s.",
-      "description": "Pokaż gdzie znajduje się dany gracz."
+      "success": "Koordynaty: (%s, %s, %s).\nKrążyć：%s, %s, %s\nID sceny: %s.",
+      "description": "Pobiera informacje o pozycji i obrocie"
     },
     "quest": {
       "added": "Zadanie %s zostało dodane.",
       "finished": "Zadanie %s zostało zakończone.",
       "not_found": "Nie ma zadania o podanym ID.",
       "invalid_id": "Błędny format ID zadania.",
-      "description": "Dodaj lub wykonaj wskazane zadanie."
+      "description": "Dodaj lub wykonaj wskazane zadanie.",
+      "running": "🇺🇸Quest %s is %s (%s).",
+      "talking": "🇺🇸Talk %s is %s for main quest %s (%s).",
+      "state": {
+        "none": "🇺🇸unknown (none)",
+        "unstarted": "🇺🇸unfinished (not started, not completed)",
+        "unfinished": "🇺🇸unfinished (started, not completed)",
+        "finished": "🇺🇸finished (completed)",
+        "failed": "🇺🇸finished (completed, but failed)",
+        "exists": "🇺🇸found",
+        "not_exists": "🇺🇸not found"
+      },
+      "enabled": "🇺🇸Questing enabled."
+    },
+    "group": {
+      "invalid_groupid": "🇺🇸Invalid group ID.",
+      "invalid_suiteid": "🇺🇸Invalid suite ID.",
+      "group_not_found": "🇺🇸Group not found.",
+      "description": "🇺🇸Alter group loading",
+      "refreshed": "🇺🇸Group %s refreshed."
+    },
+    "cutscene": {
+      "description": "Odtwarza przerywnik filmowy"
+    },
+    "sound": {
+      "description": "🇺🇸Plays a sound"
     },
     "reload": {
       "reload_start": "Ponowne ładowanie konfiguracji...",
@@ -264,6 +312,7 @@
       "fail": "Nie udało się ustawić konstelacji.",
       "failed_success": "Konstelacje dla %s zostały ustawione na %s. Proszę przeładować scenę aby zobaczyć zmiany.",
       "success": "Konstelacje dla %s zostały ustawione na %s.",
+      "successall": "🇺🇸Constellations for all characters have been set to %s.",
       "description": "Ustawia poziom konstelacji dla aktywnej postaci"
     },
     "setFetterLevel": {
@@ -292,8 +341,8 @@
       "description": "Zatrzymaj serwer."
     },
     "talent": {
-      "lower_16": "Błędny poziom talentu. Poziom ten powinien być mniejszy niż 16.",
-      "set_id": "🇺🇸Set talent %s - \"%s\" to %s.",
+      "out_of_range": "Nieprawidłowy poziom talentu. Poziom powinien mieścić się w zakresie 1-15.",
+      "set_id": "Ustawiono talent %s - \"%s\" to %s.",
       "id_desc": "🇺🇸Talent %s - \"%s\" - \"%s\"",
       "invalid_skill_id": "Błędne ID umiejętności.",
       "invalid_level": "Błędny poziom talentu.",
@@ -327,6 +376,17 @@
       "success": "Gracz %s został przeniesiony do pozycji (%s, %s, %s) w scenie o ID %s.",
       "description": "Przemieść wybranego gracza do podanej pozycji w podanej scenie."
     },
+    "trialAvatarActivity": {
+      "description": "Manipuluj funkcjami Trial Avatar Activity. Obejmuje to przełączanie stanów lochów i nagród.",
+      "not_found": "Nie znaleziono danych gracza o aktywności awatara w wersji próbnej. Być może aktywność nie jest włączona.",
+      "invalid_param": "Niewłaściwy parametr.",
+      "schedule_not_found": "Nie znaleziono harmonogramu %s.",
+      "success_schedule": "Zmieniono identyfikator harmonogramu na %s.",
+      "success_dungeon": "Przełączono stan lochów awatara %s.",
+      "success_dungeon_all": "Zmieniono stan lochów wszystkich awatarów.",
+      "success_reward": "Zmieniono status nagrody awatara %s.",
+      "success_reward_all": "Zmieniono status nagrody dla wszystkich awatarów."
+    },
     "weather": {
       "success": "ID pogody został ustawiony na %s, a typ klimatu na %s.",
       "status": "Bieżące ID pogody to %s, a typ klimatu to %s.",
@@ -346,6 +406,9 @@
       "success": "Pomyślnie odbanowano podanego gracza.",
       "failure": "Gracz o podanym ID nie istnieje.",
       "description": "Odbanuj podanego gracza."
+    },
+    "troubleshoot": {
+      "description": "🇺🇸Generate debugging information for troubleshooting."
     }
   },
   "gacha": {
@@ -381,6 +444,27 @@
       "title": "Dokumentacja",
       "handbook": "🇺🇸GM Handbook",
       "gacha_mapping": "Losowanie w formacie JSON"
+    }
+  },
+  "plugin": {
+    "directory_failed": "Nie udało się utworzyć lokalizacji z pluginami: ",
+    "unable_to_load": "Nie udało się załadować pluginów.",
+    "invalid_config": "Plugin %s ma nieprawidłową konfigurację.",
+    "invalid_main_class": "Plugin %s ma nieprawidłową główną klasę.",
+    "missing_config": "Pluginowi %s brakuje poprawnego pliku konfiguracji.",
+    "failed_to_load_plugin": "Niepowodzenie w załadowaniu pluginu: %s",
+    "failed_to_load": "Niepowodzenie w załadowaniu pluginu.",
+    "failed_to_load_dependencies": "Niepowodzenie w załadowaniu pluginu z zależnościami.",
+    "loading_plugin": "Ładowanie pluginu: %s",
+    "failed_add_id": "Niepowodzenie w dodawaniu identyfikatora pluginu: %s",
+    "enabling_plugin": "Włączanie pluginu: %s",
+    "enabling_failed": "Nie udało się załączyć pluginu: %s",
+    "disabling_plugin": "Wyłączanie pluginu: %s",
+    "disabling_failed": "Nie udało się wyłączyć pluginu: %s",
+    "invalid_api": {
+      "not_present": "🇺🇸Plugin %s does not specify an API version.",
+      "lower": "🇺🇸Plugin %s is using API version %s, while the server is using API version %s.",
+      "outdated": "🇺🇸Plugin %s is using an outdated API method."
     }
   }
 }

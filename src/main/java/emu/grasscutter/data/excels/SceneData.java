@@ -1,32 +1,22 @@
 package emu.grasscutter.data.excels;
 
-import emu.grasscutter.data.GameData;
+import com.google.gson.annotations.SerializedName;
 import emu.grasscutter.data.GameResource;
 import emu.grasscutter.data.ResourceType;
-
 import emu.grasscutter.game.props.SceneType;
+import java.util.List;
+import lombok.Getter;
 
 @ResourceType(name = "SceneExcelConfigData.json")
+@Getter
 public class SceneData extends GameResource {
-	private int id;
-	private SceneType type;
-	private String scriptData;
+    @Getter(onMethod_ = @Override)
+    private int id;
 
-	@Override
-	public int getId() {
-		return this.id;
-	}
+    @SerializedName("type")
+    private SceneType sceneType;
 
-	public SceneType getSceneType() {
-		return type;
-	}
-
-	public String getScriptData() {
-		return scriptData;
-	}
-
-	@Override
-	public void onLoad() {
-
-	}
+    private String scriptData;
+    private String levelEntityConfig;
+    private List<Integer> specifiedAvatarList;
 }

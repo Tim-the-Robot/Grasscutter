@@ -15,6 +15,10 @@ public final class WidgetSlotOpOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * <pre>
+   * Obf: DAADDKFJJAH
+   * </pre>
+   *
    * Protobuf enum {@code WidgetSlotOp}
    */
   public enum WidgetSlotOp

@@ -15,6 +15,10 @@ public final class MpSettingTypeOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * <pre>
+   * Obf: BBPFDAGPFLE
+   * </pre>
+   *
    * Protobuf enum {@code MpSettingType}
    */
   public enum MpSettingType

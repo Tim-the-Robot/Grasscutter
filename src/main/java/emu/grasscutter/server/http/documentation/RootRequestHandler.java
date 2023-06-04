@@ -1,41 +1,42 @@
 package emu.grasscutter.server.http.documentation;
 
-import static emu.grasscutter.config.Configuration.DATA;
-import static emu.grasscutter.utils.Language.translate;
+import static emu.grasscutter.utils.lang.Language.translate;
 
 import emu.grasscutter.Grasscutter;
-import emu.grasscutter.data.ResourceLoader;
 import emu.grasscutter.utils.FileUtils;
-import emu.grasscutter.utils.Utils;
-import express.http.Request;
-import express.http.Response;
-import java.io.File;
-import java.nio.charset.StandardCharsets;
+import io.javalin.http.ContentType;
+import io.javalin.http.Context;
+import java.io.IOException;
+import java.nio.file.Files;
 
 final class RootRequestHandler implements DocumentationHandler {
 
     private final String template;
 
     public RootRequestHandler() {
-        final File templateFile = new File(Utils.toFilePath(DATA("documentation/index.html")));
-        if (templateFile.exists()) {
-            template = new String(FileUtils.read(templateFile), StandardCharsets.UTF_8);
-        } else {
-            Grasscutter.getLogger().warn("File does not exist: " + templateFile);
-            template = null;
+        var templatePath = FileUtils.getDataPath("documentation/index.html");
+        String t = null;
+        try {
+            t = Files.readString(templatePath);
+        } catch (IOException ignored) {
+            Grasscutter.getLogger().warn("File does not exist: " + templatePath);
         }
+        this.template = t;
     }
 
     @Override
-    public void handle(Request request, Response response) {
+    public void handle(Context ctx) {
         if (template == null) {
-            response.status(500);
+            ctx.status(500);
             return;
         }
 
-        String content = template.replace("{{TITLE}}", translate("documentation.index.title"))
-                .replace("{{ITEM_HANDBOOK}}", translate("documentation.index.handbook"))
-                .replace("{{ITEM_GACHA_MAPPING}}", translate("documentation.index.gacha_mapping"));
-        response.send(content);
+        String content =
+                template
+                        .replace("{{TITLE}}", translate("documentation.index.title"))
+                        .replace("{{ITEM_HANDBOOK}}", translate("documentation.index.handbook"))
+                        .replace("{{ITEM_GACHA_MAPPING}}", translate("documentation.index.gacha_mapping"));
+        ctx.contentType(ContentType.TEXT_HTML);
+        ctx.result(content);
     }
 }

@@ -54,10 +54,8 @@ public final class AvatarExpeditionDataNotifyOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 1771
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
+   * CmdId: 1660
+   * Obf: PIBEOOOINOF
    * </pre>
    *
    * Protobuf type {@code AvatarExpeditionDataNotify}
@@ -411,10 +409,8 @@ public final class AvatarExpeditionDataNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 1771
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
+     * CmdId: 1660
+     * Obf: PIBEOOOINOF
      * </pre>
      *
      * Protobuf type {@code AvatarExpeditionDataNotify}

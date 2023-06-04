@@ -40,6 +40,10 @@ public final class AnimatorParameterValueInfoPairOuterClass {
     emu.grasscutter.net.proto.AnimatorParameterValueInfoOuterClass.AnimatorParameterValueInfoOrBuilder getAnimatorParaOrBuilder();
   }
   /**
+   * <pre>
+   * Obf: HDPEDMCMNHN
+   * </pre>
+   *
    * Protobuf type {@code AnimatorParameterValueInfoPair}
    */
   public static final class AnimatorParameterValueInfoPair extends
@@ -343,6 +347,10 @@ public final class AnimatorParameterValueInfoPairOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Obf: HDPEDMCMNHN
+     * </pre>
+     *
      * Protobuf type {@code AnimatorParameterValueInfoPair}
      */
     public static final class Builder extends

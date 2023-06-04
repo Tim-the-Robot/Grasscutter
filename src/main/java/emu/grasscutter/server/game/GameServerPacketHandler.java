@@ -1,20 +1,18 @@
 package emu.grasscutter.server.game;
 
-import static emu.grasscutter.config.Configuration.*;
-
-import java.util.Set;
-
-import emu.grasscutter.server.event.game.ReceivePacketEvent;
-import org.reflections.Reflections;
+import static emu.grasscutter.config.Configuration.GAME_INFO;
 
 import emu.grasscutter.Grasscutter;
 import emu.grasscutter.Grasscutter.ServerDebugMode;
 import emu.grasscutter.net.packet.Opcodes;
 import emu.grasscutter.net.packet.PacketHandler;
 import emu.grasscutter.net.packet.PacketOpcodes;
+import emu.grasscutter.server.event.game.ReceivePacketEvent;
 import emu.grasscutter.server.game.GameSession.SessionState;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
+import java.util.Set;
+import org.reflections.Reflections;
 
 @SuppressWarnings("unchecked")
 public class GameServerPacketHandler {
@@ -51,7 +49,8 @@ public class GameServerPacketHandler {
         }
 
         // Debug
-        Grasscutter.getLogger().debug("Registered " + this.handlers.size() + " " + handlerClass.getSimpleName() + "s");
+        Grasscutter.getLogger()
+                .debug("Registered " + this.handlers.size() + " " + handlerClass.getSimpleName() + "s");
     }
 
     public void handle(GameSession session, int opcode, byte[] header, byte[] payload) {
@@ -68,6 +67,9 @@ public class GameServerPacketHandler {
                     if (state != SessionState.WAITING_FOR_TOKEN) {
                         return;
                     }
+                } else if (state == SessionState.ACCOUNT_BANNED) {
+                    session.close();
+                    return;
                 } else if (opcode == PacketOpcodes.PlayerLoginReq) {
                     if (state != SessionState.WAITING_FOR_LOGIN) {
                         return;
@@ -83,9 +85,10 @@ public class GameServerPacketHandler {
                 }
 
                 // Invoke event.
-                ReceivePacketEvent event = new ReceivePacketEvent(session, opcode, payload); event.call();
+                ReceivePacketEvent event = new ReceivePacketEvent(session, opcode, payload);
+                event.call();
                 if (!event.isCanceled()) // If event is not canceled, continue.
-                    handler.handle(session, header, event.getPacketData());
+                handler.handle(session, header, event.getPacketData());
             } catch (Exception ex) {
                 // TODO Remove this when no more needed
                 ex.printStackTrace();
@@ -94,8 +97,14 @@ public class GameServerPacketHandler {
         }
 
         // Log unhandled packets
-        if (GAME_INFO.logPackets == ServerDebugMode.MISSING) {
-            Grasscutter.getLogger().info("Unhandled packet (" + opcode + "): " + emu.grasscutter.net.packet.PacketOpcodesUtils.getOpcodeName(opcode));
+        if (GAME_INFO.logPackets == ServerDebugMode.MISSING
+                || GAME_INFO.logPackets == ServerDebugMode.ALL) {
+            Grasscutter.getLogger()
+                    .info(
+                            "Unhandled packet ("
+                                    + opcode
+                                    + "): "
+                                    + emu.grasscutter.net.packet.PacketOpcodesUtils.getOpcodeName(opcode));
         }
     }
 }

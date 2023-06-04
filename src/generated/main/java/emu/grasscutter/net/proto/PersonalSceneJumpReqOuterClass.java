@@ -26,10 +26,8 @@ public final class PersonalSceneJumpReqOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 284
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
+   * CmdId: 219
+   * Obf: LDHAOJBJLEE
    * </pre>
    *
    * Protobuf type {@code PersonalSceneJumpReq}
@@ -281,10 +279,8 @@ public final class PersonalSceneJumpReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 284
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
+     * CmdId: 219
+     * Obf: LDHAOJBJLEE
      * </pre>
      *
      * Protobuf type {@code PersonalSceneJumpReq}

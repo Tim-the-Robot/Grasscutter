@@ -31,6 +31,10 @@ public final class ForceUpdateInfoOuterClass {
         getForceUpdateUrlBytes();
   }
   /**
+   * <pre>
+   * Obf: BFFAMAJFAIO
+   * </pre>
+   *
    * Protobuf type {@code ForceUpdateInfo}
    */
   public static final class ForceUpdateInfo extends
@@ -307,6 +311,10 @@ public final class ForceUpdateInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Obf: BFFAMAJFAIO
+     * </pre>
+     *
      * Protobuf type {@code ForceUpdateInfo}
      */
     public static final class Builder extends

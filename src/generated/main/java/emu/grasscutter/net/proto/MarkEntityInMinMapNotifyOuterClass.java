@@ -19,38 +19,36 @@ public final class MarkEntityInMinMapNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.Vector position = 4;</code>
+     * <code>.Vector position = 15;</code>
      * @return Whether the position field is set.
      */
     boolean hasPosition();
     /**
-     * <code>.Vector position = 4;</code>
+     * <code>.Vector position = 15;</code>
      * @return The position.
      */
     emu.grasscutter.net.proto.VectorOuterClass.Vector getPosition();
     /**
-     * <code>.Vector position = 4;</code>
+     * <code>.Vector position = 15;</code>
      */
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPositionOrBuilder();
 
     /**
-     * <code>uint32 monster_id = 7;</code>
+     * <code>uint32 monster_id = 1;</code>
      * @return The monsterId.
      */
     int getMonsterId();
 
     /**
-     * <code>uint32 entity_id = 14;</code>
+     * <code>uint32 entity_id = 6;</code>
      * @return The entityId.
      */
     int getEntityId();
   }
   /**
    * <pre>
-   * CmdId: 202
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
+   * CmdId: 269
+   * Obf: GNENOGJPOIO
    * </pre>
    *
    * Protobuf type {@code MarkEntityInMinMapNotify}
@@ -97,7 +95,17 @@ public final class MarkEntityInMinMapNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 34: {
+            case 8: {
+
+              monsterId_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+
+              entityId_ = input.readUInt32();
+              break;
+            }
+            case 122: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (position_ != null) {
                 subBuilder = position_.toBuilder();
@@ -108,16 +116,6 @@ public final class MarkEntityInMinMapNotifyOuterClass {
                 position_ = subBuilder.buildPartial();
               }
 
-              break;
-            }
-            case 56: {
-
-              monsterId_ = input.readUInt32();
-              break;
-            }
-            case 112: {
-
-              entityId_ = input.readUInt32();
               break;
             }
             default: {
@@ -152,10 +150,10 @@ public final class MarkEntityInMinMapNotifyOuterClass {
               emu.grasscutter.net.proto.MarkEntityInMinMapNotifyOuterClass.MarkEntityInMinMapNotify.class, emu.grasscutter.net.proto.MarkEntityInMinMapNotifyOuterClass.MarkEntityInMinMapNotify.Builder.class);
     }
 
-    public static final int POSITION_FIELD_NUMBER = 4;
+    public static final int POSITION_FIELD_NUMBER = 15;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector position_;
     /**
-     * <code>.Vector position = 4;</code>
+     * <code>.Vector position = 15;</code>
      * @return Whether the position field is set.
      */
     @java.lang.Override
@@ -163,7 +161,7 @@ public final class MarkEntityInMinMapNotifyOuterClass {
       return position_ != null;
     }
     /**
-     * <code>.Vector position = 4;</code>
+     * <code>.Vector position = 15;</code>
      * @return The position.
      */
     @java.lang.Override
@@ -171,17 +169,17 @@ public final class MarkEntityInMinMapNotifyOuterClass {
       return position_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : position_;
     }
     /**
-     * <code>.Vector position = 4;</code>
+     * <code>.Vector position = 15;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPositionOrBuilder() {
       return getPosition();
     }
 
-    public static final int MONSTER_ID_FIELD_NUMBER = 7;
+    public static final int MONSTER_ID_FIELD_NUMBER = 1;
     private int monsterId_;
     /**
-     * <code>uint32 monster_id = 7;</code>
+     * <code>uint32 monster_id = 1;</code>
      * @return The monsterId.
      */
     @java.lang.Override
@@ -189,10 +187,10 @@ public final class MarkEntityInMinMapNotifyOuterClass {
       return monsterId_;
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 14;
+    public static final int ENTITY_ID_FIELD_NUMBER = 6;
     private int entityId_;
     /**
-     * <code>uint32 entity_id = 14;</code>
+     * <code>uint32 entity_id = 6;</code>
      * @return The entityId.
      */
     @java.lang.Override
@@ -214,14 +212,14 @@ public final class MarkEntityInMinMapNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (position_ != null) {
-        output.writeMessage(4, getPosition());
-      }
       if (monsterId_ != 0) {
-        output.writeUInt32(7, monsterId_);
+        output.writeUInt32(1, monsterId_);
       }
       if (entityId_ != 0) {
-        output.writeUInt32(14, entityId_);
+        output.writeUInt32(6, entityId_);
+      }
+      if (position_ != null) {
+        output.writeMessage(15, getPosition());
       }
       unknownFields.writeTo(output);
     }
@@ -232,17 +230,17 @@ public final class MarkEntityInMinMapNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (position_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getPosition());
-      }
       if (monsterId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, monsterId_);
+          .computeUInt32Size(1, monsterId_);
       }
       if (entityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, entityId_);
+          .computeUInt32Size(6, entityId_);
+      }
+      if (position_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getPosition());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -384,10 +382,8 @@ public final class MarkEntityInMinMapNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 202
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
+     * CmdId: 269
+     * Obf: GNENOGJPOIO
      * </pre>
      *
      * Protobuf type {@code MarkEntityInMinMapNotify}
@@ -560,14 +556,14 @@ public final class MarkEntityInMinMapNotifyOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> positionBuilder_;
       /**
-       * <code>.Vector position = 4;</code>
+       * <code>.Vector position = 15;</code>
        * @return Whether the position field is set.
        */
       public boolean hasPosition() {
         return positionBuilder_ != null || position_ != null;
       }
       /**
-       * <code>.Vector position = 4;</code>
+       * <code>.Vector position = 15;</code>
        * @return The position.
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector getPosition() {
@@ -578,7 +574,7 @@ public final class MarkEntityInMinMapNotifyOuterClass {
         }
       }
       /**
-       * <code>.Vector position = 4;</code>
+       * <code>.Vector position = 15;</code>
        */
       public Builder setPosition(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (positionBuilder_ == null) {
@@ -594,7 +590,7 @@ public final class MarkEntityInMinMapNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.Vector position = 4;</code>
+       * <code>.Vector position = 15;</code>
        */
       public Builder setPosition(
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
@@ -608,7 +604,7 @@ public final class MarkEntityInMinMapNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.Vector position = 4;</code>
+       * <code>.Vector position = 15;</code>
        */
       public Builder mergePosition(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (positionBuilder_ == null) {
@@ -626,7 +622,7 @@ public final class MarkEntityInMinMapNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.Vector position = 4;</code>
+       * <code>.Vector position = 15;</code>
        */
       public Builder clearPosition() {
         if (positionBuilder_ == null) {
@@ -640,7 +636,7 @@ public final class MarkEntityInMinMapNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.Vector position = 4;</code>
+       * <code>.Vector position = 15;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getPositionBuilder() {
         
@@ -648,7 +644,7 @@ public final class MarkEntityInMinMapNotifyOuterClass {
         return getPositionFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Vector position = 4;</code>
+       * <code>.Vector position = 15;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPositionOrBuilder() {
         if (positionBuilder_ != null) {
@@ -659,7 +655,7 @@ public final class MarkEntityInMinMapNotifyOuterClass {
         }
       }
       /**
-       * <code>.Vector position = 4;</code>
+       * <code>.Vector position = 15;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
@@ -677,7 +673,7 @@ public final class MarkEntityInMinMapNotifyOuterClass {
 
       private int monsterId_ ;
       /**
-       * <code>uint32 monster_id = 7;</code>
+       * <code>uint32 monster_id = 1;</code>
        * @return The monsterId.
        */
       @java.lang.Override
@@ -685,7 +681,7 @@ public final class MarkEntityInMinMapNotifyOuterClass {
         return monsterId_;
       }
       /**
-       * <code>uint32 monster_id = 7;</code>
+       * <code>uint32 monster_id = 1;</code>
        * @param value The monsterId to set.
        * @return This builder for chaining.
        */
@@ -696,7 +692,7 @@ public final class MarkEntityInMinMapNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 monster_id = 7;</code>
+       * <code>uint32 monster_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearMonsterId() {
@@ -708,7 +704,7 @@ public final class MarkEntityInMinMapNotifyOuterClass {
 
       private int entityId_ ;
       /**
-       * <code>uint32 entity_id = 14;</code>
+       * <code>uint32 entity_id = 6;</code>
        * @return The entityId.
        */
       @java.lang.Override
@@ -716,7 +712,7 @@ public final class MarkEntityInMinMapNotifyOuterClass {
         return entityId_;
       }
       /**
-       * <code>uint32 entity_id = 14;</code>
+       * <code>uint32 entity_id = 6;</code>
        * @param value The entityId to set.
        * @return This builder for chaining.
        */
@@ -727,7 +723,7 @@ public final class MarkEntityInMinMapNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 entity_id = 14;</code>
+       * <code>uint32 entity_id = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityId() {
@@ -805,8 +801,8 @@ public final class MarkEntityInMinMapNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\036MarkEntityInMinMapNotify.proto\032\014Vector" +
       ".proto\"\\\n\030MarkEntityInMinMapNotify\022\031\n\010po" +
-      "sition\030\004 \001(\0132\007.Vector\022\022\n\nmonster_id\030\007 \001(" +
-      "\r\022\021\n\tentity_id\030\016 \001(\rB\033\n\031emu.grasscutter." +
+      "sition\030\017 \001(\0132\007.Vector\022\022\n\nmonster_id\030\001 \001(" +
+      "\r\022\021\n\tentity_id\030\006 \001(\rB\033\n\031emu.grasscutter." +
       "net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

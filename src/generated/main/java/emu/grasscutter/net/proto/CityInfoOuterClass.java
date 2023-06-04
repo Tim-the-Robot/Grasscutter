@@ -25,18 +25,22 @@ public final class CityInfoOuterClass {
     int getCityId();
 
     /**
-     * <code>uint32 crystal_num = 3;</code>
+     * <code>uint32 crystal_num = 8;</code>
      * @return The crystalNum.
      */
     int getCrystalNum();
 
     /**
-     * <code>uint32 level = 4;</code>
+     * <code>uint32 level = 14;</code>
      * @return The level.
      */
     int getLevel();
   }
   /**
+   * <pre>
+   * Obf: POBBFHKEACF
+   * </pre>
+   *
    * Protobuf type {@code CityInfo}
    */
   public static final class CityInfo extends
@@ -81,12 +85,12 @@ public final class CityInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 24: {
+            case 64: {
 
               crystalNum_ = input.readUInt32();
               break;
             }
-            case 32: {
+            case 112: {
 
               level_ = input.readUInt32();
               break;
@@ -139,10 +143,10 @@ public final class CityInfoOuterClass {
       return cityId_;
     }
 
-    public static final int CRYSTAL_NUM_FIELD_NUMBER = 3;
+    public static final int CRYSTAL_NUM_FIELD_NUMBER = 8;
     private int crystalNum_;
     /**
-     * <code>uint32 crystal_num = 3;</code>
+     * <code>uint32 crystal_num = 8;</code>
      * @return The crystalNum.
      */
     @java.lang.Override
@@ -150,10 +154,10 @@ public final class CityInfoOuterClass {
       return crystalNum_;
     }
 
-    public static final int LEVEL_FIELD_NUMBER = 4;
+    public static final int LEVEL_FIELD_NUMBER = 14;
     private int level_;
     /**
-     * <code>uint32 level = 4;</code>
+     * <code>uint32 level = 14;</code>
      * @return The level.
      */
     @java.lang.Override
@@ -176,10 +180,10 @@ public final class CityInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (crystalNum_ != 0) {
-        output.writeUInt32(3, crystalNum_);
+        output.writeUInt32(8, crystalNum_);
       }
       if (level_ != 0) {
-        output.writeUInt32(4, level_);
+        output.writeUInt32(14, level_);
       }
       if (cityId_ != 0) {
         output.writeUInt32(15, cityId_);
@@ -195,11 +199,11 @@ public final class CityInfoOuterClass {
       size = 0;
       if (crystalNum_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, crystalNum_);
+          .computeUInt32Size(8, crystalNum_);
       }
       if (level_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, level_);
+          .computeUInt32Size(14, level_);
       }
       if (cityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -339,6 +343,10 @@ public final class CityInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Obf: POBBFHKEACF
+     * </pre>
+     *
      * Protobuf type {@code CityInfo}
      */
     public static final class Builder extends
@@ -530,7 +538,7 @@ public final class CityInfoOuterClass {
 
       private int crystalNum_ ;
       /**
-       * <code>uint32 crystal_num = 3;</code>
+       * <code>uint32 crystal_num = 8;</code>
        * @return The crystalNum.
        */
       @java.lang.Override
@@ -538,7 +546,7 @@ public final class CityInfoOuterClass {
         return crystalNum_;
       }
       /**
-       * <code>uint32 crystal_num = 3;</code>
+       * <code>uint32 crystal_num = 8;</code>
        * @param value The crystalNum to set.
        * @return This builder for chaining.
        */
@@ -549,7 +557,7 @@ public final class CityInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 crystal_num = 3;</code>
+       * <code>uint32 crystal_num = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearCrystalNum() {
@@ -561,7 +569,7 @@ public final class CityInfoOuterClass {
 
       private int level_ ;
       /**
-       * <code>uint32 level = 4;</code>
+       * <code>uint32 level = 14;</code>
        * @return The level.
        */
       @java.lang.Override
@@ -569,7 +577,7 @@ public final class CityInfoOuterClass {
         return level_;
       }
       /**
-       * <code>uint32 level = 4;</code>
+       * <code>uint32 level = 14;</code>
        * @param value The level to set.
        * @return This builder for chaining.
        */
@@ -580,7 +588,7 @@ public final class CityInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 level = 4;</code>
+       * <code>uint32 level = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearLevel() {
@@ -657,7 +665,7 @@ public final class CityInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\016CityInfo.proto\"?\n\010CityInfo\022\017\n\007city_id\030" +
-      "\017 \001(\r\022\023\n\013crystal_num\030\003 \001(\r\022\r\n\005level\030\004 \001(" +
+      "\017 \001(\r\022\023\n\013crystal_num\030\010 \001(\r\022\r\n\005level\030\016 \001(" +
       "\rB\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

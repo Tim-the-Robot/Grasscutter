@@ -3,54 +3,52 @@ package emu.grasscutter.data.excels;
 import emu.grasscutter.data.GameData;
 import emu.grasscutter.data.GameResource;
 import emu.grasscutter.data.ResourceType;
-import lombok.AccessLevel;
 import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @ResourceType(name = "OpenStateConfigData.json", loadPriority = ResourceType.LoadPriority.HIGHEST)
 public class OpenStateData extends GameResource {
+    @Getter(onMethod_ = @Override)
     private int id;
-    @Getter private boolean defaultState;
-    @Getter private boolean allowClientOpen;
-    @Getter private int systemOpenUiId;
-    @Getter private List<OpenStateCond> cond;
-
-    public static class OpenStateCond {
-        @Getter private OpenStateCondType condType;
-        @Getter private int param;
-        @Getter private int param2;
-    }
-
-    public static enum OpenStateCondType {
-        OPEN_STATE_COND_PLAYER_LEVEL,
-        OPEN_STATE_COND_QUEST,
-        OPEN_STATE_OFFERING_LEVEL,
-        OPEN_STATE_CITY_REPUTATION_LEVEL,
-        OPEN_STATE_COND_PARENT_QUEST;
-    }
-
-    @Override
-    public int getId() {
-        return this.id;
-    }
+    @Getter
+    private boolean defaultState;
+    @Getter
+    private boolean allowClientOpen;
+    @Getter
+    private int systemOpenUiId;
+    @Getter
+    private List<OpenStateCond> cond;
 
     @Override
     public void onLoad() {
         // Add this open state to the global list.
         GameData.getOpenStateList().add(this);
 
-        // Clean up cond.
-        List<OpenStateCond> cleanedConds = new ArrayList<>();
-        for (var c : this.cond) {
-            if (c.getCondType() != null) {
-                cleanedConds.add(c);
-            }
+        // Remove any empty conditions
+        if (this.cond != null) {
+            this.cond.removeIf(c -> c.getCondType() == null);
+        } else {
+            this.cond = new ArrayList<>();
         }
+    }
 
-        this.cond = cleanedConds;
+    public enum OpenStateCondType {
+        OPEN_STATE_COND_PLAYER_LEVEL,
+        OPEN_STATE_COND_QUEST,
+        OPEN_STATE_OFFERING_LEVEL,
+        OPEN_STATE_CITY_REPUTATION_LEVEL,
+        OPEN_STATE_COND_PARENT_QUEST
+    }
+
+    public static class OpenStateCond {
+        @Getter
+        private OpenStateCondType condType;
+        @Getter
+        private int param;
+        @Getter
+        private int param2;
     }
 }
 

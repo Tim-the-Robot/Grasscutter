@@ -37,10 +37,8 @@ public final class PlayerLevelRewardUpdateNotifyOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 200
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
+   * CmdId: 109
+   * Obf: JNNKIPADMND
    * </pre>
    *
    * Protobuf type {@code PlayerLevelRewardUpdateNotify}
@@ -347,10 +345,8 @@ public final class PlayerLevelRewardUpdateNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 200
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
+     * CmdId: 109
+     * Obf: JNNKIPADMND
      * </pre>
      *
      * Protobuf type {@code PlayerLevelRewardUpdateNotify}

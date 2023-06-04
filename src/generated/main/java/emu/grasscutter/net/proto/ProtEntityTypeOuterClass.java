@@ -15,6 +15,10 @@ public final class ProtEntityTypeOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * <pre>
+   * Obf: KLLMIOGKNNI
+   * </pre>
+   *
    * Protobuf enum {@code ProtEntityType}
    */
   public enum ProtEntityType

@@ -1,10 +1,10 @@
 package emu.grasscutter.data.excels;
 
+import com.google.gson.annotations.SerializedName;
 import emu.grasscutter.data.GameResource;
 import emu.grasscutter.data.ResourceType;
 import emu.grasscutter.data.common.ItemParamData;
 import emu.grasscutter.game.shop.ShopInfo;
-
 import java.util.List;
 
 @ResourceType(name = "ShopGoodsExcelConfigData.json")
@@ -24,25 +24,29 @@ public class ShopGoodsData extends GameResource {
     private int maxPlayerLevel;
 
     private int buyLimit;
+
+    @SerializedName(
+            value = "subTabId",
+            alternate = {"secondarySheetId"})
     private int subTabId;
 
     private String refreshType;
     private transient ShopInfo.ShopRefreshType refreshTypeEnum;
-    
+
     private int refreshParam;
 
     @Override
     public void onLoad() {
-       if (this.refreshType == null)
-           this.refreshTypeEnum = ShopInfo.ShopRefreshType.NONE;
-       else {
-           this.refreshTypeEnum = switch (this.refreshType) {
-               case "SHOP_REFRESH_DAILY" -> ShopInfo.ShopRefreshType.SHOP_REFRESH_DAILY;
-               case "SHOP_REFRESH_WEEKLY" -> ShopInfo.ShopRefreshType.SHOP_REFRESH_WEEKLY;
-               case "SHOP_REFRESH_MONTHLY" -> ShopInfo.ShopRefreshType.SHOP_REFRESH_MONTHLY;
-               default -> ShopInfo.ShopRefreshType.NONE;
-           };
-       }
+        if (this.refreshType == null) this.refreshTypeEnum = ShopInfo.ShopRefreshType.NONE;
+        else {
+            this.refreshTypeEnum =
+                    switch (this.refreshType) {
+                        case "SHOP_REFRESH_DAILY" -> ShopInfo.ShopRefreshType.SHOP_REFRESH_DAILY;
+                        case "SHOP_REFRESH_WEEKLY" -> ShopInfo.ShopRefreshType.SHOP_REFRESH_WEEKLY;
+                        case "SHOP_REFRESH_MONTHLY" -> ShopInfo.ShopRefreshType.SHOP_REFRESH_MONTHLY;
+                        default -> ShopInfo.ShopRefreshType.NONE;
+                    };
+        }
     }
 
     @Override

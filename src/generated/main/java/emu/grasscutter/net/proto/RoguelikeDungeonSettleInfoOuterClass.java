@@ -19,23 +19,17 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 stage_id = 5;</code>
-     * @return The stageId.
+     * <code>bool KHILPCPJILE = 5;</code>
+     * @return The kHILPCPJILE.
      */
-    int getStageId();
+    boolean getKHILPCPJILE();
 
     /**
-     * <code>bool is_final_level = 15;</code>
-     * @return The isFinalLevel.
-     */
-    boolean getIsFinalLevel();
-
-    /**
-     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 3;</code>
+     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 11;</code>
      */
     int getFinishedChallengeCellNumMapCount();
     /**
-     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 3;</code>
+     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 11;</code>
      */
     boolean containsFinishedChallengeCellNumMap(
         int key);
@@ -46,49 +40,59 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
     java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.RoguelikeSettleCoinInfoOuterClass.RoguelikeSettleCoinInfo>
     getFinishedChallengeCellNumMap();
     /**
-     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 3;</code>
+     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 11;</code>
      */
     java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.RoguelikeSettleCoinInfoOuterClass.RoguelikeSettleCoinInfo>
     getFinishedChallengeCellNumMapMap();
     /**
-     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 3;</code>
+     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 11;</code>
      */
 
     emu.grasscutter.net.proto.RoguelikeSettleCoinInfoOuterClass.RoguelikeSettleCoinInfo getFinishedChallengeCellNumMapOrDefault(
         int key,
         emu.grasscutter.net.proto.RoguelikeSettleCoinInfoOuterClass.RoguelikeSettleCoinInfo defaultValue);
     /**
-     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 3;</code>
+     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 11;</code>
      */
 
     emu.grasscutter.net.proto.RoguelikeSettleCoinInfoOuterClass.RoguelikeSettleCoinInfo getFinishedChallengeCellNumMapOrThrow(
         int key);
 
     /**
-     * <code>bool is_coin_c_reach_limit = 13;</code>
-     * @return The isCoinCReachLimit.
+     * <code>uint32 NGBINNKKLGM = 8;</code>
+     * @return The nGBINNKKLGM.
      */
-    boolean getIsCoinCReachLimit();
+    int getNGBINNKKLGM();
 
     /**
-     * <code>uint32 cur_level = 9;</code>
+     * <code>uint32 cur_level = 12;</code>
      * @return The curLevel.
      */
     int getCurLevel();
 
     /**
-     * <code>uint32 total_coin_b_num = 6;</code>
-     * @return The totalCoinBNum.
+     * <code>bool CMIGJNOEDCL = 13;</code>
+     * @return The cMIGJNOEDCL.
      */
-    int getTotalCoinBNum();
+    boolean getCMIGJNOEDCL();
 
     /**
-     * <code>uint32 total_coin_c_num = 10;</code>
-     * @return The totalCoinCNum.
+     * <code>uint32 EJLMFGAMCNE = 1;</code>
+     * @return The eJLMFGAMCNE.
      */
-    int getTotalCoinCNum();
+    int getEJLMFGAMCNE();
+
+    /**
+     * <code>uint32 stage_id = 6;</code>
+     * @return The stageId.
+     */
+    int getStageId();
   }
   /**
+   * <pre>
+   * Obf: BJJHJCJGLAJ
+   * </pre>
+   *
    * Protobuf type {@code RoguelikeDungeonSettleInfo}
    */
   public static final class RoguelikeDungeonSettleInfo extends
@@ -134,7 +138,27 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 26: {
+            case 8: {
+
+              eJLMFGAMCNE_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+
+              kHILPCPJILE_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              stageId_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              nGBINNKKLGM_ = input.readUInt32();
+              break;
+            }
+            case 90: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 finishedChallengeCellNumMap_ = com.google.protobuf.MapField.newMapField(
                     FinishedChallengeCellNumMapDefaultEntryHolder.defaultEntry);
@@ -147,34 +171,14 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
                   finishedChallengeCellNumMap__.getKey(), finishedChallengeCellNumMap__.getValue());
               break;
             }
-            case 40: {
-
-              stageId_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-
-              totalCoinBNum_ = input.readUInt32();
-              break;
-            }
-            case 72: {
+            case 96: {
 
               curLevel_ = input.readUInt32();
               break;
             }
-            case 80: {
-
-              totalCoinCNum_ = input.readUInt32();
-              break;
-            }
             case 104: {
 
-              isCoinCReachLimit_ = input.readBool();
-              break;
-            }
-            case 120: {
-
-              isFinalLevel_ = input.readBool();
+              cMIGJNOEDCL_ = input.readBool();
               break;
             }
             default: {
@@ -206,7 +210,7 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 3:
+        case 11:
           return internalGetFinishedChallengeCellNumMap();
         default:
           throw new RuntimeException(
@@ -221,29 +225,18 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
               emu.grasscutter.net.proto.RoguelikeDungeonSettleInfoOuterClass.RoguelikeDungeonSettleInfo.class, emu.grasscutter.net.proto.RoguelikeDungeonSettleInfoOuterClass.RoguelikeDungeonSettleInfo.Builder.class);
     }
 
-    public static final int STAGE_ID_FIELD_NUMBER = 5;
-    private int stageId_;
+    public static final int KHILPCPJILE_FIELD_NUMBER = 5;
+    private boolean kHILPCPJILE_;
     /**
-     * <code>uint32 stage_id = 5;</code>
-     * @return The stageId.
+     * <code>bool KHILPCPJILE = 5;</code>
+     * @return The kHILPCPJILE.
      */
     @java.lang.Override
-    public int getStageId() {
-      return stageId_;
+    public boolean getKHILPCPJILE() {
+      return kHILPCPJILE_;
     }
 
-    public static final int IS_FINAL_LEVEL_FIELD_NUMBER = 15;
-    private boolean isFinalLevel_;
-    /**
-     * <code>bool is_final_level = 15;</code>
-     * @return The isFinalLevel.
-     */
-    @java.lang.Override
-    public boolean getIsFinalLevel() {
-      return isFinalLevel_;
-    }
-
-    public static final int FINISHED_CHALLENGE_CELL_NUM_MAP_FIELD_NUMBER = 3;
+    public static final int FINISHED_CHALLENGE_CELL_NUM_MAP_FIELD_NUMBER = 11;
     private static final class FinishedChallengeCellNumMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, emu.grasscutter.net.proto.RoguelikeSettleCoinInfoOuterClass.RoguelikeSettleCoinInfo> defaultEntry =
@@ -270,7 +263,7 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
       return internalGetFinishedChallengeCellNumMap().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 3;</code>
+     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 11;</code>
      */
 
     @java.lang.Override
@@ -288,7 +281,7 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
       return getFinishedChallengeCellNumMapMap();
     }
     /**
-     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 3;</code>
+     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 11;</code>
      */
     @java.lang.Override
 
@@ -296,7 +289,7 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
       return internalGetFinishedChallengeCellNumMap().getMap();
     }
     /**
-     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 3;</code>
+     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 11;</code>
      */
     @java.lang.Override
 
@@ -309,7 +302,7 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 3;</code>
+     * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 11;</code>
      */
     @java.lang.Override
 
@@ -324,21 +317,21 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
       return map.get(key);
     }
 
-    public static final int IS_COIN_C_REACH_LIMIT_FIELD_NUMBER = 13;
-    private boolean isCoinCReachLimit_;
+    public static final int NGBINNKKLGM_FIELD_NUMBER = 8;
+    private int nGBINNKKLGM_;
     /**
-     * <code>bool is_coin_c_reach_limit = 13;</code>
-     * @return The isCoinCReachLimit.
+     * <code>uint32 NGBINNKKLGM = 8;</code>
+     * @return The nGBINNKKLGM.
      */
     @java.lang.Override
-    public boolean getIsCoinCReachLimit() {
-      return isCoinCReachLimit_;
+    public int getNGBINNKKLGM() {
+      return nGBINNKKLGM_;
     }
 
-    public static final int CUR_LEVEL_FIELD_NUMBER = 9;
+    public static final int CUR_LEVEL_FIELD_NUMBER = 12;
     private int curLevel_;
     /**
-     * <code>uint32 cur_level = 9;</code>
+     * <code>uint32 cur_level = 12;</code>
      * @return The curLevel.
      */
     @java.lang.Override
@@ -346,26 +339,37 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
       return curLevel_;
     }
 
-    public static final int TOTAL_COIN_B_NUM_FIELD_NUMBER = 6;
-    private int totalCoinBNum_;
+    public static final int CMIGJNOEDCL_FIELD_NUMBER = 13;
+    private boolean cMIGJNOEDCL_;
     /**
-     * <code>uint32 total_coin_b_num = 6;</code>
-     * @return The totalCoinBNum.
+     * <code>bool CMIGJNOEDCL = 13;</code>
+     * @return The cMIGJNOEDCL.
      */
     @java.lang.Override
-    public int getTotalCoinBNum() {
-      return totalCoinBNum_;
+    public boolean getCMIGJNOEDCL() {
+      return cMIGJNOEDCL_;
     }
 
-    public static final int TOTAL_COIN_C_NUM_FIELD_NUMBER = 10;
-    private int totalCoinCNum_;
+    public static final int EJLMFGAMCNE_FIELD_NUMBER = 1;
+    private int eJLMFGAMCNE_;
     /**
-     * <code>uint32 total_coin_c_num = 10;</code>
-     * @return The totalCoinCNum.
+     * <code>uint32 EJLMFGAMCNE = 1;</code>
+     * @return The eJLMFGAMCNE.
      */
     @java.lang.Override
-    public int getTotalCoinCNum() {
-      return totalCoinCNum_;
+    public int getEJLMFGAMCNE() {
+      return eJLMFGAMCNE_;
+    }
+
+    public static final int STAGE_ID_FIELD_NUMBER = 6;
+    private int stageId_;
+    /**
+     * <code>uint32 stage_id = 6;</code>
+     * @return The stageId.
+     */
+    @java.lang.Override
+    public int getStageId() {
+      return stageId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -382,29 +386,29 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (eJLMFGAMCNE_ != 0) {
+        output.writeUInt32(1, eJLMFGAMCNE_);
+      }
+      if (kHILPCPJILE_ != false) {
+        output.writeBool(5, kHILPCPJILE_);
+      }
+      if (stageId_ != 0) {
+        output.writeUInt32(6, stageId_);
+      }
+      if (nGBINNKKLGM_ != 0) {
+        output.writeUInt32(8, nGBINNKKLGM_);
+      }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
           internalGetFinishedChallengeCellNumMap(),
           FinishedChallengeCellNumMapDefaultEntryHolder.defaultEntry,
-          3);
-      if (stageId_ != 0) {
-        output.writeUInt32(5, stageId_);
-      }
-      if (totalCoinBNum_ != 0) {
-        output.writeUInt32(6, totalCoinBNum_);
-      }
+          11);
       if (curLevel_ != 0) {
-        output.writeUInt32(9, curLevel_);
+        output.writeUInt32(12, curLevel_);
       }
-      if (totalCoinCNum_ != 0) {
-        output.writeUInt32(10, totalCoinCNum_);
-      }
-      if (isCoinCReachLimit_ != false) {
-        output.writeBool(13, isCoinCReachLimit_);
-      }
-      if (isFinalLevel_ != false) {
-        output.writeBool(15, isFinalLevel_);
+      if (cMIGJNOEDCL_ != false) {
+        output.writeBool(13, cMIGJNOEDCL_);
       }
       unknownFields.writeTo(output);
     }
@@ -415,6 +419,22 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (eJLMFGAMCNE_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, eJLMFGAMCNE_);
+      }
+      if (kHILPCPJILE_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, kHILPCPJILE_);
+      }
+      if (stageId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, stageId_);
+      }
+      if (nGBINNKKLGM_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, nGBINNKKLGM_);
+      }
       for (java.util.Map.Entry<java.lang.Integer, emu.grasscutter.net.proto.RoguelikeSettleCoinInfoOuterClass.RoguelikeSettleCoinInfo> entry
            : internalGetFinishedChallengeCellNumMap().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.RoguelikeSettleCoinInfoOuterClass.RoguelikeSettleCoinInfo>
@@ -423,31 +443,15 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(3, finishedChallengeCellNumMap__);
-      }
-      if (stageId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, stageId_);
-      }
-      if (totalCoinBNum_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, totalCoinBNum_);
+            .computeMessageSize(11, finishedChallengeCellNumMap__);
       }
       if (curLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, curLevel_);
+          .computeUInt32Size(12, curLevel_);
       }
-      if (totalCoinCNum_ != 0) {
+      if (cMIGJNOEDCL_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, totalCoinCNum_);
-      }
-      if (isCoinCReachLimit_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(13, isCoinCReachLimit_);
-      }
-      if (isFinalLevel_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(15, isFinalLevel_);
+          .computeBoolSize(13, cMIGJNOEDCL_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -464,20 +468,20 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
       }
       emu.grasscutter.net.proto.RoguelikeDungeonSettleInfoOuterClass.RoguelikeDungeonSettleInfo other = (emu.grasscutter.net.proto.RoguelikeDungeonSettleInfoOuterClass.RoguelikeDungeonSettleInfo) obj;
 
-      if (getStageId()
-          != other.getStageId()) return false;
-      if (getIsFinalLevel()
-          != other.getIsFinalLevel()) return false;
+      if (getKHILPCPJILE()
+          != other.getKHILPCPJILE()) return false;
       if (!internalGetFinishedChallengeCellNumMap().equals(
           other.internalGetFinishedChallengeCellNumMap())) return false;
-      if (getIsCoinCReachLimit()
-          != other.getIsCoinCReachLimit()) return false;
+      if (getNGBINNKKLGM()
+          != other.getNGBINNKKLGM()) return false;
       if (getCurLevel()
           != other.getCurLevel()) return false;
-      if (getTotalCoinBNum()
-          != other.getTotalCoinBNum()) return false;
-      if (getTotalCoinCNum()
-          != other.getTotalCoinCNum()) return false;
+      if (getCMIGJNOEDCL()
+          != other.getCMIGJNOEDCL()) return false;
+      if (getEJLMFGAMCNE()
+          != other.getEJLMFGAMCNE()) return false;
+      if (getStageId()
+          != other.getStageId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -489,24 +493,24 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + STAGE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getStageId();
-      hash = (37 * hash) + IS_FINAL_LEVEL_FIELD_NUMBER;
+      hash = (37 * hash) + KHILPCPJILE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsFinalLevel());
+          getKHILPCPJILE());
       if (!internalGetFinishedChallengeCellNumMap().getMap().isEmpty()) {
         hash = (37 * hash) + FINISHED_CHALLENGE_CELL_NUM_MAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetFinishedChallengeCellNumMap().hashCode();
       }
-      hash = (37 * hash) + IS_COIN_C_REACH_LIMIT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsCoinCReachLimit());
+      hash = (37 * hash) + NGBINNKKLGM_FIELD_NUMBER;
+      hash = (53 * hash) + getNGBINNKKLGM();
       hash = (37 * hash) + CUR_LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + getCurLevel();
-      hash = (37 * hash) + TOTAL_COIN_B_NUM_FIELD_NUMBER;
-      hash = (53 * hash) + getTotalCoinBNum();
-      hash = (37 * hash) + TOTAL_COIN_C_NUM_FIELD_NUMBER;
-      hash = (53 * hash) + getTotalCoinCNum();
+      hash = (37 * hash) + CMIGJNOEDCL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getCMIGJNOEDCL());
+      hash = (37 * hash) + EJLMFGAMCNE_FIELD_NUMBER;
+      hash = (53 * hash) + getEJLMFGAMCNE();
+      hash = (37 * hash) + STAGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getStageId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -603,6 +607,10 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Obf: BJJHJCJGLAJ
+     * </pre>
+     *
      * Protobuf type {@code RoguelikeDungeonSettleInfo}
      */
     public static final class Builder extends
@@ -618,7 +626,7 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 3:
+          case 11:
             return internalGetFinishedChallengeCellNumMap();
           default:
             throw new RuntimeException(
@@ -629,7 +637,7 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 3:
+          case 11:
             return internalGetMutableFinishedChallengeCellNumMap();
           default:
             throw new RuntimeException(
@@ -662,18 +670,18 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        stageId_ = 0;
-
-        isFinalLevel_ = false;
+        kHILPCPJILE_ = false;
 
         internalGetMutableFinishedChallengeCellNumMap().clear();
-        isCoinCReachLimit_ = false;
+        nGBINNKKLGM_ = 0;
 
         curLevel_ = 0;
 
-        totalCoinBNum_ = 0;
+        cMIGJNOEDCL_ = false;
 
-        totalCoinCNum_ = 0;
+        eJLMFGAMCNE_ = 0;
+
+        stageId_ = 0;
 
         return this;
       }
@@ -702,14 +710,14 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
       public emu.grasscutter.net.proto.RoguelikeDungeonSettleInfoOuterClass.RoguelikeDungeonSettleInfo buildPartial() {
         emu.grasscutter.net.proto.RoguelikeDungeonSettleInfoOuterClass.RoguelikeDungeonSettleInfo result = new emu.grasscutter.net.proto.RoguelikeDungeonSettleInfoOuterClass.RoguelikeDungeonSettleInfo(this);
         int from_bitField0_ = bitField0_;
-        result.stageId_ = stageId_;
-        result.isFinalLevel_ = isFinalLevel_;
+        result.kHILPCPJILE_ = kHILPCPJILE_;
         result.finishedChallengeCellNumMap_ = internalGetFinishedChallengeCellNumMap();
         result.finishedChallengeCellNumMap_.makeImmutable();
-        result.isCoinCReachLimit_ = isCoinCReachLimit_;
+        result.nGBINNKKLGM_ = nGBINNKKLGM_;
         result.curLevel_ = curLevel_;
-        result.totalCoinBNum_ = totalCoinBNum_;
-        result.totalCoinCNum_ = totalCoinCNum_;
+        result.cMIGJNOEDCL_ = cMIGJNOEDCL_;
+        result.eJLMFGAMCNE_ = eJLMFGAMCNE_;
+        result.stageId_ = stageId_;
         onBuilt();
         return result;
       }
@@ -758,25 +766,25 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.RoguelikeDungeonSettleInfoOuterClass.RoguelikeDungeonSettleInfo other) {
         if (other == emu.grasscutter.net.proto.RoguelikeDungeonSettleInfoOuterClass.RoguelikeDungeonSettleInfo.getDefaultInstance()) return this;
-        if (other.getStageId() != 0) {
-          setStageId(other.getStageId());
-        }
-        if (other.getIsFinalLevel() != false) {
-          setIsFinalLevel(other.getIsFinalLevel());
+        if (other.getKHILPCPJILE() != false) {
+          setKHILPCPJILE(other.getKHILPCPJILE());
         }
         internalGetMutableFinishedChallengeCellNumMap().mergeFrom(
             other.internalGetFinishedChallengeCellNumMap());
-        if (other.getIsCoinCReachLimit() != false) {
-          setIsCoinCReachLimit(other.getIsCoinCReachLimit());
+        if (other.getNGBINNKKLGM() != 0) {
+          setNGBINNKKLGM(other.getNGBINNKKLGM());
         }
         if (other.getCurLevel() != 0) {
           setCurLevel(other.getCurLevel());
         }
-        if (other.getTotalCoinBNum() != 0) {
-          setTotalCoinBNum(other.getTotalCoinBNum());
+        if (other.getCMIGJNOEDCL() != false) {
+          setCMIGJNOEDCL(other.getCMIGJNOEDCL());
         }
-        if (other.getTotalCoinCNum() != 0) {
-          setTotalCoinCNum(other.getTotalCoinCNum());
+        if (other.getEJLMFGAMCNE() != 0) {
+          setEJLMFGAMCNE(other.getEJLMFGAMCNE());
+        }
+        if (other.getStageId() != 0) {
+          setStageId(other.getStageId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -808,64 +816,33 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
       }
       private int bitField0_;
 
-      private int stageId_ ;
+      private boolean kHILPCPJILE_ ;
       /**
-       * <code>uint32 stage_id = 5;</code>
-       * @return The stageId.
+       * <code>bool KHILPCPJILE = 5;</code>
+       * @return The kHILPCPJILE.
        */
       @java.lang.Override
-      public int getStageId() {
-        return stageId_;
+      public boolean getKHILPCPJILE() {
+        return kHILPCPJILE_;
       }
       /**
-       * <code>uint32 stage_id = 5;</code>
-       * @param value The stageId to set.
+       * <code>bool KHILPCPJILE = 5;</code>
+       * @param value The kHILPCPJILE to set.
        * @return This builder for chaining.
        */
-      public Builder setStageId(int value) {
+      public Builder setKHILPCPJILE(boolean value) {
         
-        stageId_ = value;
+        kHILPCPJILE_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 stage_id = 5;</code>
+       * <code>bool KHILPCPJILE = 5;</code>
        * @return This builder for chaining.
        */
-      public Builder clearStageId() {
+      public Builder clearKHILPCPJILE() {
         
-        stageId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean isFinalLevel_ ;
-      /**
-       * <code>bool is_final_level = 15;</code>
-       * @return The isFinalLevel.
-       */
-      @java.lang.Override
-      public boolean getIsFinalLevel() {
-        return isFinalLevel_;
-      }
-      /**
-       * <code>bool is_final_level = 15;</code>
-       * @param value The isFinalLevel to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsFinalLevel(boolean value) {
-        
-        isFinalLevel_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_final_level = 15;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsFinalLevel() {
-        
-        isFinalLevel_ = false;
+        kHILPCPJILE_ = false;
         onChanged();
         return this;
       }
@@ -897,7 +874,7 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
         return internalGetFinishedChallengeCellNumMap().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 3;</code>
+       * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 11;</code>
        */
 
       @java.lang.Override
@@ -915,7 +892,7 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
         return getFinishedChallengeCellNumMapMap();
       }
       /**
-       * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 3;</code>
+       * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 11;</code>
        */
       @java.lang.Override
 
@@ -923,7 +900,7 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
         return internalGetFinishedChallengeCellNumMap().getMap();
       }
       /**
-       * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 3;</code>
+       * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 11;</code>
        */
       @java.lang.Override
 
@@ -936,7 +913,7 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 3;</code>
+       * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 11;</code>
        */
       @java.lang.Override
 
@@ -957,7 +934,7 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 3;</code>
+       * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 11;</code>
        */
 
       public Builder removeFinishedChallengeCellNumMap(
@@ -976,7 +953,7 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
         return internalGetMutableFinishedChallengeCellNumMap().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 3;</code>
+       * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 11;</code>
        */
       public Builder putFinishedChallengeCellNumMap(
           int key,
@@ -988,7 +965,7 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 3;</code>
+       * <code>map&lt;uint32, .RoguelikeSettleCoinInfo&gt; finished_challenge_cell_num_map = 11;</code>
        */
 
       public Builder putAllFinishedChallengeCellNumMap(
@@ -998,40 +975,40 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
         return this;
       }
 
-      private boolean isCoinCReachLimit_ ;
+      private int nGBINNKKLGM_ ;
       /**
-       * <code>bool is_coin_c_reach_limit = 13;</code>
-       * @return The isCoinCReachLimit.
+       * <code>uint32 NGBINNKKLGM = 8;</code>
+       * @return The nGBINNKKLGM.
        */
       @java.lang.Override
-      public boolean getIsCoinCReachLimit() {
-        return isCoinCReachLimit_;
+      public int getNGBINNKKLGM() {
+        return nGBINNKKLGM_;
       }
       /**
-       * <code>bool is_coin_c_reach_limit = 13;</code>
-       * @param value The isCoinCReachLimit to set.
+       * <code>uint32 NGBINNKKLGM = 8;</code>
+       * @param value The nGBINNKKLGM to set.
        * @return This builder for chaining.
        */
-      public Builder setIsCoinCReachLimit(boolean value) {
+      public Builder setNGBINNKKLGM(int value) {
         
-        isCoinCReachLimit_ = value;
+        nGBINNKKLGM_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool is_coin_c_reach_limit = 13;</code>
+       * <code>uint32 NGBINNKKLGM = 8;</code>
        * @return This builder for chaining.
        */
-      public Builder clearIsCoinCReachLimit() {
+      public Builder clearNGBINNKKLGM() {
         
-        isCoinCReachLimit_ = false;
+        nGBINNKKLGM_ = 0;
         onChanged();
         return this;
       }
 
       private int curLevel_ ;
       /**
-       * <code>uint32 cur_level = 9;</code>
+       * <code>uint32 cur_level = 12;</code>
        * @return The curLevel.
        */
       @java.lang.Override
@@ -1039,7 +1016,7 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
         return curLevel_;
       }
       /**
-       * <code>uint32 cur_level = 9;</code>
+       * <code>uint32 cur_level = 12;</code>
        * @param value The curLevel to set.
        * @return This builder for chaining.
        */
@@ -1050,7 +1027,7 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 cur_level = 9;</code>
+       * <code>uint32 cur_level = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearCurLevel() {
@@ -1060,64 +1037,95 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
         return this;
       }
 
-      private int totalCoinBNum_ ;
+      private boolean cMIGJNOEDCL_ ;
       /**
-       * <code>uint32 total_coin_b_num = 6;</code>
-       * @return The totalCoinBNum.
+       * <code>bool CMIGJNOEDCL = 13;</code>
+       * @return The cMIGJNOEDCL.
        */
       @java.lang.Override
-      public int getTotalCoinBNum() {
-        return totalCoinBNum_;
+      public boolean getCMIGJNOEDCL() {
+        return cMIGJNOEDCL_;
       }
       /**
-       * <code>uint32 total_coin_b_num = 6;</code>
-       * @param value The totalCoinBNum to set.
+       * <code>bool CMIGJNOEDCL = 13;</code>
+       * @param value The cMIGJNOEDCL to set.
        * @return This builder for chaining.
        */
-      public Builder setTotalCoinBNum(int value) {
+      public Builder setCMIGJNOEDCL(boolean value) {
         
-        totalCoinBNum_ = value;
+        cMIGJNOEDCL_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 total_coin_b_num = 6;</code>
+       * <code>bool CMIGJNOEDCL = 13;</code>
        * @return This builder for chaining.
        */
-      public Builder clearTotalCoinBNum() {
+      public Builder clearCMIGJNOEDCL() {
         
-        totalCoinBNum_ = 0;
+        cMIGJNOEDCL_ = false;
         onChanged();
         return this;
       }
 
-      private int totalCoinCNum_ ;
+      private int eJLMFGAMCNE_ ;
       /**
-       * <code>uint32 total_coin_c_num = 10;</code>
-       * @return The totalCoinCNum.
+       * <code>uint32 EJLMFGAMCNE = 1;</code>
+       * @return The eJLMFGAMCNE.
        */
       @java.lang.Override
-      public int getTotalCoinCNum() {
-        return totalCoinCNum_;
+      public int getEJLMFGAMCNE() {
+        return eJLMFGAMCNE_;
       }
       /**
-       * <code>uint32 total_coin_c_num = 10;</code>
-       * @param value The totalCoinCNum to set.
+       * <code>uint32 EJLMFGAMCNE = 1;</code>
+       * @param value The eJLMFGAMCNE to set.
        * @return This builder for chaining.
        */
-      public Builder setTotalCoinCNum(int value) {
+      public Builder setEJLMFGAMCNE(int value) {
         
-        totalCoinCNum_ = value;
+        eJLMFGAMCNE_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 total_coin_c_num = 10;</code>
+       * <code>uint32 EJLMFGAMCNE = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearTotalCoinCNum() {
+      public Builder clearEJLMFGAMCNE() {
         
-        totalCoinCNum_ = 0;
+        eJLMFGAMCNE_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int stageId_ ;
+      /**
+       * <code>uint32 stage_id = 6;</code>
+       * @return The stageId.
+       */
+      @java.lang.Override
+      public int getStageId() {
+        return stageId_;
+      }
+      /**
+       * <code>uint32 stage_id = 6;</code>
+       * @param value The stageId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStageId(int value) {
+        
+        stageId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 stage_id = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStageId() {
+        
+        stageId_ = 0;
         onChanged();
         return this;
       }
@@ -1194,17 +1202,17 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n RoguelikeDungeonSettleInfo.proto\032\035Rogu" +
-      "elikeSettleCoinInfo.proto\"\361\002\n\032RoguelikeD" +
-      "ungeonSettleInfo\022\020\n\010stage_id\030\005 \001(\r\022\026\n\016is" +
-      "_final_level\030\017 \001(\010\022e\n\037finished_challenge" +
-      "_cell_num_map\030\003 \003(\0132<.RoguelikeDungeonSe" +
-      "ttleInfo.FinishedChallengeCellNumMapEntr" +
-      "y\022\035\n\025is_coin_c_reach_limit\030\r \001(\010\022\021\n\tcur_" +
-      "level\030\t \001(\r\022\030\n\020total_coin_b_num\030\006 \001(\r\022\030\n" +
-      "\020total_coin_c_num\030\n \001(\r\032\\\n FinishedChall" +
-      "engeCellNumMapEntry\022\013\n\003key\030\001 \001(\r\022\'\n\005valu" +
-      "e\030\002 \001(\0132\030.RoguelikeSettleCoinInfo:\0028\001B\033\n" +
-      "\031emu.grasscutter.net.protob\006proto3"
+      "elikeSettleCoinInfo.proto\"\332\002\n\032RoguelikeD" +
+      "ungeonSettleInfo\022\023\n\013KHILPCPJILE\030\005 \001(\010\022e\n" +
+      "\037finished_challenge_cell_num_map\030\013 \003(\0132<" +
+      ".RoguelikeDungeonSettleInfo.FinishedChal" +
+      "lengeCellNumMapEntry\022\023\n\013NGBINNKKLGM\030\010 \001(" +
+      "\r\022\021\n\tcur_level\030\014 \001(\r\022\023\n\013CMIGJNOEDCL\030\r \001(" +
+      "\010\022\023\n\013EJLMFGAMCNE\030\001 \001(\r\022\020\n\010stage_id\030\006 \001(\r" +
+      "\032\\\n FinishedChallengeCellNumMapEntry\022\013\n\003" +
+      "key\030\001 \001(\r\022\'\n\005value\030\002 \001(\0132\030.RoguelikeSett" +
+      "leCoinInfo:\0028\001B\033\n\031emu.grasscutter.net.pr" +
+      "otob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1216,7 +1224,7 @@ public final class RoguelikeDungeonSettleInfoOuterClass {
     internal_static_RoguelikeDungeonSettleInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RoguelikeDungeonSettleInfo_descriptor,
-        new java.lang.String[] { "StageId", "IsFinalLevel", "FinishedChallengeCellNumMap", "IsCoinCReachLimit", "CurLevel", "TotalCoinBNum", "TotalCoinCNum", });
+        new java.lang.String[] { "KHILPCPJILE", "FinishedChallengeCellNumMap", "NGBINNKKLGM", "CurLevel", "CMIGJNOEDCL", "EJLMFGAMCNE", "StageId", });
     internal_static_RoguelikeDungeonSettleInfo_FinishedChallengeCellNumMapEntry_descriptor =
       internal_static_RoguelikeDungeonSettleInfo_descriptor.getNestedTypes().get(0);
     internal_static_RoguelikeDungeonSettleInfo_FinishedChallengeCellNumMapEntry_fieldAccessorTable = new

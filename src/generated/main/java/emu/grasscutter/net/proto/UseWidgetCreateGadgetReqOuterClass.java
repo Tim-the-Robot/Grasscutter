@@ -19,47 +19,45 @@ public final class UseWidgetCreateGadgetReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.Vector pos = 15;</code>
+     * <code>uint32 material_id = 14;</code>
+     * @return The materialId.
+     */
+    int getMaterialId();
+
+    /**
+     * <code>.Vector pos = 10;</code>
      * @return Whether the pos field is set.
      */
     boolean hasPos();
     /**
-     * <code>.Vector pos = 15;</code>
+     * <code>.Vector pos = 10;</code>
      * @return The pos.
      */
     emu.grasscutter.net.proto.VectorOuterClass.Vector getPos();
     /**
-     * <code>.Vector pos = 15;</code>
+     * <code>.Vector pos = 10;</code>
      */
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder();
 
     /**
-     * <code>.Vector rot = 12;</code>
+     * <code>.Vector rot = 13;</code>
      * @return Whether the rot field is set.
      */
     boolean hasRot();
     /**
-     * <code>.Vector rot = 12;</code>
+     * <code>.Vector rot = 13;</code>
      * @return The rot.
      */
     emu.grasscutter.net.proto.VectorOuterClass.Vector getRot();
     /**
-     * <code>.Vector rot = 12;</code>
+     * <code>.Vector rot = 13;</code>
      */
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder();
-
-    /**
-     * <code>uint32 material_id = 4;</code>
-     * @return The materialId.
-     */
-    int getMaterialId();
   }
   /**
    * <pre>
-   * CmdId: 4293
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
+   * CmdId: 4272
+   * Obf: BACNGKGEKIB
    * </pre>
    *
    * Protobuf type {@code UseWidgetCreateGadgetReq}
@@ -106,12 +104,20 @@ public final class UseWidgetCreateGadgetReqOuterClass {
             case 0:
               done = true;
               break;
-            case 32: {
+            case 82: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (pos_ != null) {
+                subBuilder = pos_.toBuilder();
+              }
+              pos_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pos_);
+                pos_ = subBuilder.buildPartial();
+              }
 
-              materialId_ = input.readUInt32();
               break;
             }
-            case 98: {
+            case 106: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (rot_ != null) {
                 subBuilder = rot_.toBuilder();
@@ -124,17 +130,9 @@ public final class UseWidgetCreateGadgetReqOuterClass {
 
               break;
             }
-            case 122: {
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
-              if (pos_ != null) {
-                subBuilder = pos_.toBuilder();
-              }
-              pos_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(pos_);
-                pos_ = subBuilder.buildPartial();
-              }
+            case 112: {
 
+              materialId_ = input.readUInt32();
               break;
             }
             default: {
@@ -169,10 +167,21 @@ public final class UseWidgetCreateGadgetReqOuterClass {
               emu.grasscutter.net.proto.UseWidgetCreateGadgetReqOuterClass.UseWidgetCreateGadgetReq.class, emu.grasscutter.net.proto.UseWidgetCreateGadgetReqOuterClass.UseWidgetCreateGadgetReq.Builder.class);
     }
 
-    public static final int POS_FIELD_NUMBER = 15;
+    public static final int MATERIAL_ID_FIELD_NUMBER = 14;
+    private int materialId_;
+    /**
+     * <code>uint32 material_id = 14;</code>
+     * @return The materialId.
+     */
+    @java.lang.Override
+    public int getMaterialId() {
+      return materialId_;
+    }
+
+    public static final int POS_FIELD_NUMBER = 10;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
     /**
-     * <code>.Vector pos = 15;</code>
+     * <code>.Vector pos = 10;</code>
      * @return Whether the pos field is set.
      */
     @java.lang.Override
@@ -180,7 +189,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
       return pos_ != null;
     }
     /**
-     * <code>.Vector pos = 15;</code>
+     * <code>.Vector pos = 10;</code>
      * @return The pos.
      */
     @java.lang.Override
@@ -188,17 +197,17 @@ public final class UseWidgetCreateGadgetReqOuterClass {
       return pos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
     }
     /**
-     * <code>.Vector pos = 15;</code>
+     * <code>.Vector pos = 10;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder() {
       return getPos();
     }
 
-    public static final int ROT_FIELD_NUMBER = 12;
+    public static final int ROT_FIELD_NUMBER = 13;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector rot_;
     /**
-     * <code>.Vector rot = 12;</code>
+     * <code>.Vector rot = 13;</code>
      * @return Whether the rot field is set.
      */
     @java.lang.Override
@@ -206,7 +215,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
       return rot_ != null;
     }
     /**
-     * <code>.Vector rot = 12;</code>
+     * <code>.Vector rot = 13;</code>
      * @return The rot.
      */
     @java.lang.Override
@@ -214,22 +223,11 @@ public final class UseWidgetCreateGadgetReqOuterClass {
       return rot_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : rot_;
     }
     /**
-     * <code>.Vector rot = 12;</code>
+     * <code>.Vector rot = 13;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder() {
       return getRot();
-    }
-
-    public static final int MATERIAL_ID_FIELD_NUMBER = 4;
-    private int materialId_;
-    /**
-     * <code>uint32 material_id = 4;</code>
-     * @return The materialId.
-     */
-    @java.lang.Override
-    public int getMaterialId() {
-      return materialId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -246,14 +244,14 @@ public final class UseWidgetCreateGadgetReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (materialId_ != 0) {
-        output.writeUInt32(4, materialId_);
+      if (pos_ != null) {
+        output.writeMessage(10, getPos());
       }
       if (rot_ != null) {
-        output.writeMessage(12, getRot());
+        output.writeMessage(13, getRot());
       }
-      if (pos_ != null) {
-        output.writeMessage(15, getPos());
+      if (materialId_ != 0) {
+        output.writeUInt32(14, materialId_);
       }
       unknownFields.writeTo(output);
     }
@@ -264,17 +262,17 @@ public final class UseWidgetCreateGadgetReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (materialId_ != 0) {
+      if (pos_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, materialId_);
+          .computeMessageSize(10, getPos());
       }
       if (rot_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, getRot());
+          .computeMessageSize(13, getRot());
       }
-      if (pos_ != null) {
+      if (materialId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, getPos());
+          .computeUInt32Size(14, materialId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -291,6 +289,8 @@ public final class UseWidgetCreateGadgetReqOuterClass {
       }
       emu.grasscutter.net.proto.UseWidgetCreateGadgetReqOuterClass.UseWidgetCreateGadgetReq other = (emu.grasscutter.net.proto.UseWidgetCreateGadgetReqOuterClass.UseWidgetCreateGadgetReq) obj;
 
+      if (getMaterialId()
+          != other.getMaterialId()) return false;
       if (hasPos() != other.hasPos()) return false;
       if (hasPos()) {
         if (!getPos()
@@ -301,8 +301,6 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         if (!getRot()
             .equals(other.getRot())) return false;
       }
-      if (getMaterialId()
-          != other.getMaterialId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -314,6 +312,8 @@ public final class UseWidgetCreateGadgetReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MATERIAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getMaterialId();
       if (hasPos()) {
         hash = (37 * hash) + POS_FIELD_NUMBER;
         hash = (53 * hash) + getPos().hashCode();
@@ -322,8 +322,6 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         hash = (37 * hash) + ROT_FIELD_NUMBER;
         hash = (53 * hash) + getRot().hashCode();
       }
-      hash = (37 * hash) + MATERIAL_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getMaterialId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -421,10 +419,8 @@ public final class UseWidgetCreateGadgetReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 4293
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
+     * CmdId: 4272
+     * Obf: BACNGKGEKIB
      * </pre>
      *
      * Protobuf type {@code UseWidgetCreateGadgetReq}
@@ -464,6 +460,8 @@ public final class UseWidgetCreateGadgetReqOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        materialId_ = 0;
+
         if (posBuilder_ == null) {
           pos_ = null;
         } else {
@@ -476,8 +474,6 @@ public final class UseWidgetCreateGadgetReqOuterClass {
           rot_ = null;
           rotBuilder_ = null;
         }
-        materialId_ = 0;
-
         return this;
       }
 
@@ -504,6 +500,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.UseWidgetCreateGadgetReqOuterClass.UseWidgetCreateGadgetReq buildPartial() {
         emu.grasscutter.net.proto.UseWidgetCreateGadgetReqOuterClass.UseWidgetCreateGadgetReq result = new emu.grasscutter.net.proto.UseWidgetCreateGadgetReqOuterClass.UseWidgetCreateGadgetReq(this);
+        result.materialId_ = materialId_;
         if (posBuilder_ == null) {
           result.pos_ = pos_;
         } else {
@@ -514,7 +511,6 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         } else {
           result.rot_ = rotBuilder_.build();
         }
-        result.materialId_ = materialId_;
         onBuilt();
         return result;
       }
@@ -563,14 +559,14 @@ public final class UseWidgetCreateGadgetReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.UseWidgetCreateGadgetReqOuterClass.UseWidgetCreateGadgetReq other) {
         if (other == emu.grasscutter.net.proto.UseWidgetCreateGadgetReqOuterClass.UseWidgetCreateGadgetReq.getDefaultInstance()) return this;
+        if (other.getMaterialId() != 0) {
+          setMaterialId(other.getMaterialId());
+        }
         if (other.hasPos()) {
           mergePos(other.getPos());
         }
         if (other.hasRot()) {
           mergeRot(other.getRot());
-        }
-        if (other.getMaterialId() != 0) {
-          setMaterialId(other.getMaterialId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -601,18 +597,49 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         return this;
       }
 
+      private int materialId_ ;
+      /**
+       * <code>uint32 material_id = 14;</code>
+       * @return The materialId.
+       */
+      @java.lang.Override
+      public int getMaterialId() {
+        return materialId_;
+      }
+      /**
+       * <code>uint32 material_id = 14;</code>
+       * @param value The materialId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaterialId(int value) {
+        
+        materialId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 material_id = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaterialId() {
+        
+        materialId_ = 0;
+        onChanged();
+        return this;
+      }
+
       private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> posBuilder_;
       /**
-       * <code>.Vector pos = 15;</code>
+       * <code>.Vector pos = 10;</code>
        * @return Whether the pos field is set.
        */
       public boolean hasPos() {
         return posBuilder_ != null || pos_ != null;
       }
       /**
-       * <code>.Vector pos = 15;</code>
+       * <code>.Vector pos = 10;</code>
        * @return The pos.
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector getPos() {
@@ -623,7 +650,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         }
       }
       /**
-       * <code>.Vector pos = 15;</code>
+       * <code>.Vector pos = 10;</code>
        */
       public Builder setPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (posBuilder_ == null) {
@@ -639,7 +666,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         return this;
       }
       /**
-       * <code>.Vector pos = 15;</code>
+       * <code>.Vector pos = 10;</code>
        */
       public Builder setPos(
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
@@ -653,7 +680,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         return this;
       }
       /**
-       * <code>.Vector pos = 15;</code>
+       * <code>.Vector pos = 10;</code>
        */
       public Builder mergePos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (posBuilder_ == null) {
@@ -671,7 +698,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         return this;
       }
       /**
-       * <code>.Vector pos = 15;</code>
+       * <code>.Vector pos = 10;</code>
        */
       public Builder clearPos() {
         if (posBuilder_ == null) {
@@ -685,7 +712,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         return this;
       }
       /**
-       * <code>.Vector pos = 15;</code>
+       * <code>.Vector pos = 10;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getPosBuilder() {
         
@@ -693,7 +720,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         return getPosFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Vector pos = 15;</code>
+       * <code>.Vector pos = 10;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder() {
         if (posBuilder_ != null) {
@@ -704,7 +731,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         }
       }
       /**
-       * <code>.Vector pos = 15;</code>
+       * <code>.Vector pos = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
@@ -724,14 +751,14 @@ public final class UseWidgetCreateGadgetReqOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> rotBuilder_;
       /**
-       * <code>.Vector rot = 12;</code>
+       * <code>.Vector rot = 13;</code>
        * @return Whether the rot field is set.
        */
       public boolean hasRot() {
         return rotBuilder_ != null || rot_ != null;
       }
       /**
-       * <code>.Vector rot = 12;</code>
+       * <code>.Vector rot = 13;</code>
        * @return The rot.
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector getRot() {
@@ -742,7 +769,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         }
       }
       /**
-       * <code>.Vector rot = 12;</code>
+       * <code>.Vector rot = 13;</code>
        */
       public Builder setRot(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (rotBuilder_ == null) {
@@ -758,7 +785,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         return this;
       }
       /**
-       * <code>.Vector rot = 12;</code>
+       * <code>.Vector rot = 13;</code>
        */
       public Builder setRot(
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
@@ -772,7 +799,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         return this;
       }
       /**
-       * <code>.Vector rot = 12;</code>
+       * <code>.Vector rot = 13;</code>
        */
       public Builder mergeRot(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (rotBuilder_ == null) {
@@ -790,7 +817,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         return this;
       }
       /**
-       * <code>.Vector rot = 12;</code>
+       * <code>.Vector rot = 13;</code>
        */
       public Builder clearRot() {
         if (rotBuilder_ == null) {
@@ -804,7 +831,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         return this;
       }
       /**
-       * <code>.Vector rot = 12;</code>
+       * <code>.Vector rot = 13;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getRotBuilder() {
         
@@ -812,7 +839,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         return getRotFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Vector rot = 12;</code>
+       * <code>.Vector rot = 13;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder() {
         if (rotBuilder_ != null) {
@@ -823,7 +850,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
         }
       }
       /**
-       * <code>.Vector rot = 12;</code>
+       * <code>.Vector rot = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
@@ -837,37 +864,6 @@ public final class UseWidgetCreateGadgetReqOuterClass {
           rot_ = null;
         }
         return rotBuilder_;
-      }
-
-      private int materialId_ ;
-      /**
-       * <code>uint32 material_id = 4;</code>
-       * @return The materialId.
-       */
-      @java.lang.Override
-      public int getMaterialId() {
-        return materialId_;
-      }
-      /**
-       * <code>uint32 material_id = 4;</code>
-       * @param value The materialId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMaterialId(int value) {
-        
-        materialId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 material_id = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMaterialId() {
-        
-        materialId_ = 0;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -937,9 +933,9 @@ public final class UseWidgetCreateGadgetReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\036UseWidgetCreateGadgetReq.proto\032\014Vector" +
-      ".proto\"[\n\030UseWidgetCreateGadgetReq\022\024\n\003po" +
-      "s\030\017 \001(\0132\007.Vector\022\024\n\003rot\030\014 \001(\0132\007.Vector\022\023" +
-      "\n\013material_id\030\004 \001(\rB\033\n\031emu.grasscutter.n" +
+      ".proto\"[\n\030UseWidgetCreateGadgetReq\022\023\n\013ma" +
+      "terial_id\030\016 \001(\r\022\024\n\003pos\030\n \001(\0132\007.Vector\022\024\n" +
+      "\003rot\030\r \001(\0132\007.VectorB\033\n\031emu.grasscutter.n" +
       "et.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -952,7 +948,7 @@ public final class UseWidgetCreateGadgetReqOuterClass {
     internal_static_UseWidgetCreateGadgetReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_UseWidgetCreateGadgetReq_descriptor,
-        new java.lang.String[] { "Pos", "Rot", "MaterialId", });
+        new java.lang.String[] { "MaterialId", "Pos", "Rot", });
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
   }
 

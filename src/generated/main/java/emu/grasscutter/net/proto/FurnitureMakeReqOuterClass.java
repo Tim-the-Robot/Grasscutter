@@ -20,10 +20,8 @@ public final class FurnitureMakeReqOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 4477
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
+   * CmdId: 4758
+   * Obf: BHKDJDDKOAB
    * </pre>
    *
    * Protobuf type {@code FurnitureMakeReq}
@@ -248,10 +246,8 @@ public final class FurnitureMakeReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 4477
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
+     * CmdId: 4758
+     * Obf: BHKDJDDKOAB
      * </pre>
      *
      * Protobuf type {@code FurnitureMakeReq}

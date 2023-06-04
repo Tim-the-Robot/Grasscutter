@@ -19,29 +19,27 @@ public final class AvatarUpgradeReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 avatar_guid = 6;</code>
+     * <code>uint64 avatar_guid = 12;</code>
      * @return The avatarGuid.
      */
     long getAvatarGuid();
 
     /**
-     * <code>uint32 count = 2;</code>
+     * <code>uint32 count = 1;</code>
      * @return The count.
      */
     int getCount();
 
     /**
-     * <code>uint32 item_id = 5;</code>
+     * <code>uint32 item_id = 4;</code>
      * @return The itemId.
      */
     int getItemId();
   }
   /**
    * <pre>
-   * CmdId: 1770
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
+   * CmdId: 1629
+   * Obf: FEBHFJCIKEH
    * </pre>
    *
    * Protobuf type {@code AvatarUpgradeReq}
@@ -88,17 +86,17 @@ public final class AvatarUpgradeReqOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
+            case 8: {
 
               count_ = input.readUInt32();
               break;
             }
-            case 40: {
+            case 32: {
 
               itemId_ = input.readUInt32();
               break;
             }
-            case 48: {
+            case 96: {
 
               avatarGuid_ = input.readUInt64();
               break;
@@ -135,10 +133,10 @@ public final class AvatarUpgradeReqOuterClass {
               emu.grasscutter.net.proto.AvatarUpgradeReqOuterClass.AvatarUpgradeReq.class, emu.grasscutter.net.proto.AvatarUpgradeReqOuterClass.AvatarUpgradeReq.Builder.class);
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 6;
+    public static final int AVATAR_GUID_FIELD_NUMBER = 12;
     private long avatarGuid_;
     /**
-     * <code>uint64 avatar_guid = 6;</code>
+     * <code>uint64 avatar_guid = 12;</code>
      * @return The avatarGuid.
      */
     @java.lang.Override
@@ -146,10 +144,10 @@ public final class AvatarUpgradeReqOuterClass {
       return avatarGuid_;
     }
 
-    public static final int COUNT_FIELD_NUMBER = 2;
+    public static final int COUNT_FIELD_NUMBER = 1;
     private int count_;
     /**
-     * <code>uint32 count = 2;</code>
+     * <code>uint32 count = 1;</code>
      * @return The count.
      */
     @java.lang.Override
@@ -157,10 +155,10 @@ public final class AvatarUpgradeReqOuterClass {
       return count_;
     }
 
-    public static final int ITEM_ID_FIELD_NUMBER = 5;
+    public static final int ITEM_ID_FIELD_NUMBER = 4;
     private int itemId_;
     /**
-     * <code>uint32 item_id = 5;</code>
+     * <code>uint32 item_id = 4;</code>
      * @return The itemId.
      */
     @java.lang.Override
@@ -183,13 +181,13 @@ public final class AvatarUpgradeReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (count_ != 0) {
-        output.writeUInt32(2, count_);
+        output.writeUInt32(1, count_);
       }
       if (itemId_ != 0) {
-        output.writeUInt32(5, itemId_);
+        output.writeUInt32(4, itemId_);
       }
       if (avatarGuid_ != 0L) {
-        output.writeUInt64(6, avatarGuid_);
+        output.writeUInt64(12, avatarGuid_);
       }
       unknownFields.writeTo(output);
     }
@@ -202,15 +200,15 @@ public final class AvatarUpgradeReqOuterClass {
       size = 0;
       if (count_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, count_);
+          .computeUInt32Size(1, count_);
       }
       if (itemId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, itemId_);
+          .computeUInt32Size(4, itemId_);
       }
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(6, avatarGuid_);
+          .computeUInt64Size(12, avatarGuid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -348,10 +346,8 @@ public final class AvatarUpgradeReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 1770
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
+     * CmdId: 1629
+     * Obf: FEBHFJCIKEH
      * </pre>
      *
      * Protobuf type {@code AvatarUpgradeReq}
@@ -514,7 +510,7 @@ public final class AvatarUpgradeReqOuterClass {
 
       private long avatarGuid_ ;
       /**
-       * <code>uint64 avatar_guid = 6;</code>
+       * <code>uint64 avatar_guid = 12;</code>
        * @return The avatarGuid.
        */
       @java.lang.Override
@@ -522,7 +518,7 @@ public final class AvatarUpgradeReqOuterClass {
         return avatarGuid_;
       }
       /**
-       * <code>uint64 avatar_guid = 6;</code>
+       * <code>uint64 avatar_guid = 12;</code>
        * @param value The avatarGuid to set.
        * @return This builder for chaining.
        */
@@ -533,7 +529,7 @@ public final class AvatarUpgradeReqOuterClass {
         return this;
       }
       /**
-       * <code>uint64 avatar_guid = 6;</code>
+       * <code>uint64 avatar_guid = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearAvatarGuid() {
@@ -545,7 +541,7 @@ public final class AvatarUpgradeReqOuterClass {
 
       private int count_ ;
       /**
-       * <code>uint32 count = 2;</code>
+       * <code>uint32 count = 1;</code>
        * @return The count.
        */
       @java.lang.Override
@@ -553,7 +549,7 @@ public final class AvatarUpgradeReqOuterClass {
         return count_;
       }
       /**
-       * <code>uint32 count = 2;</code>
+       * <code>uint32 count = 1;</code>
        * @param value The count to set.
        * @return This builder for chaining.
        */
@@ -564,7 +560,7 @@ public final class AvatarUpgradeReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 count = 2;</code>
+       * <code>uint32 count = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearCount() {
@@ -576,7 +572,7 @@ public final class AvatarUpgradeReqOuterClass {
 
       private int itemId_ ;
       /**
-       * <code>uint32 item_id = 5;</code>
+       * <code>uint32 item_id = 4;</code>
        * @return The itemId.
        */
       @java.lang.Override
@@ -584,7 +580,7 @@ public final class AvatarUpgradeReqOuterClass {
         return itemId_;
       }
       /**
-       * <code>uint32 item_id = 5;</code>
+       * <code>uint32 item_id = 4;</code>
        * @param value The itemId to set.
        * @return This builder for chaining.
        */
@@ -595,7 +591,7 @@ public final class AvatarUpgradeReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 item_id = 5;</code>
+       * <code>uint32 item_id = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearItemId() {
@@ -672,8 +668,8 @@ public final class AvatarUpgradeReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026AvatarUpgradeReq.proto\"G\n\020AvatarUpgrad" +
-      "eReq\022\023\n\013avatar_guid\030\006 \001(\004\022\r\n\005count\030\002 \001(\r" +
-      "\022\017\n\007item_id\030\005 \001(\rB\033\n\031emu.grasscutter.net" +
+      "eReq\022\023\n\013avatar_guid\030\014 \001(\004\022\r\n\005count\030\001 \001(\r" +
+      "\022\017\n\007item_id\030\004 \001(\rB\033\n\031emu.grasscutter.net" +
       ".protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

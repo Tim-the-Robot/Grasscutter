@@ -19,7 +19,7 @@ public final class DelMailRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 11;</code>
+     * <code>int32 retcode = 15;</code>
      * @return The retcode.
      */
     int getRetcode();
@@ -43,10 +43,8 @@ public final class DelMailRspOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 1403
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
+   * CmdId: 1458
+   * Obf: KPGMOMOANOE
    * </pre>
    *
    * Protobuf type {@code DelMailRsp}
@@ -116,7 +114,7 @@ public final class DelMailRspOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 88: {
+            case 120: {
 
               retcode_ = input.readInt32();
               break;
@@ -156,10 +154,10 @@ public final class DelMailRspOuterClass {
               emu.grasscutter.net.proto.DelMailRspOuterClass.DelMailRsp.class, emu.grasscutter.net.proto.DelMailRspOuterClass.DelMailRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 11;
+    public static final int RETCODE_FIELD_NUMBER = 15;
     private int retcode_;
     /**
-     * <code>int32 retcode = 11;</code>
+     * <code>int32 retcode = 15;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -218,7 +216,7 @@ public final class DelMailRspOuterClass {
         output.writeUInt32NoTag(mailIdList_.getInt(i));
       }
       if (retcode_ != 0) {
-        output.writeInt32(11, retcode_);
+        output.writeInt32(15, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -245,7 +243,7 @@ public final class DelMailRspOuterClass {
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(11, retcode_);
+          .computeInt32Size(15, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -380,10 +378,8 @@ public final class DelMailRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 1403
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
+     * CmdId: 1458
+     * Obf: KPGMOMOANOE
      * </pre>
      *
      * Protobuf type {@code DelMailRsp}
@@ -553,7 +549,7 @@ public final class DelMailRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 11;</code>
+       * <code>int32 retcode = 15;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -561,7 +557,7 @@ public final class DelMailRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 11;</code>
+       * <code>int32 retcode = 15;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -572,7 +568,7 @@ public final class DelMailRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 11;</code>
+       * <code>int32 retcode = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -728,7 +724,7 @@ public final class DelMailRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\020DelMailRsp.proto\"3\n\nDelMailRsp\022\017\n\007retc" +
-      "ode\030\013 \001(\005\022\024\n\014mail_id_list\030\005 \003(\rB\033\n\031emu.g" +
+      "ode\030\017 \001(\005\022\024\n\014mail_id_list\030\005 \003(\rB\033\n\031emu.g" +
       "rasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

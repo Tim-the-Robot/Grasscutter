@@ -44,10 +44,8 @@ public final class WidgetGadgetAllDataNotifyOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 4284
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
+   * CmdId: 4252
+   * Obf: IJIBKCFOCNO
    * </pre>
    *
    * Protobuf type {@code WidgetGadgetAllDataNotify}
@@ -339,10 +337,8 @@ public final class WidgetGadgetAllDataNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 4284
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
+     * CmdId: 4252
+     * Obf: IJIBKCFOCNO
      * </pre>
      *
      * Protobuf type {@code WidgetGadgetAllDataNotify}

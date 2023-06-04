@@ -35,10 +35,8 @@ public final class HomeUpdateArrangementInfoReqOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 4510
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
+   * CmdId: 4871
+   * Obf: AHPNGIHKNPH
    * </pre>
    *
    * Protobuf type {@code HomeUpdateArrangementInfoReq}
@@ -318,10 +316,8 @@ public final class HomeUpdateArrangementInfoReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 4510
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
+     * CmdId: 4871
+     * Obf: AHPNGIHKNPH
      * </pre>
      *
      * Protobuf type {@code HomeUpdateArrangementInfoReq}

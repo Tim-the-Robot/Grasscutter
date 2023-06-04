@@ -19,100 +19,98 @@ public final class ForgeQueueManipulateRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.ForgeQueueManipulateType manipulate_type = 4;</code>
+     * <code>.ForgeQueueManipulateType manipulate_type = 10;</code>
      * @return The enum numeric value on the wire for manipulateType.
      */
     int getManipulateTypeValue();
     /**
-     * <code>.ForgeQueueManipulateType manipulate_type = 4;</code>
+     * <code>.ForgeQueueManipulateType manipulate_type = 10;</code>
      * @return The manipulateType.
      */
     emu.grasscutter.net.proto.ForgeQueueManipulateTypeOuterClass.ForgeQueueManipulateType getManipulateType();
 
     /**
-     * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+     * <code>repeated .ItemParam extra_output_item_list = 1;</code>
      */
     java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> 
         getExtraOutputItemListList();
     /**
-     * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+     * <code>repeated .ItemParam extra_output_item_list = 1;</code>
      */
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getExtraOutputItemList(int index);
     /**
-     * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+     * <code>repeated .ItemParam extra_output_item_list = 1;</code>
      */
     int getExtraOutputItemListCount();
     /**
-     * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+     * <code>repeated .ItemParam extra_output_item_list = 1;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
         getExtraOutputItemListOrBuilderList();
     /**
-     * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+     * <code>repeated .ItemParam extra_output_item_list = 1;</code>
      */
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getExtraOutputItemListOrBuilder(
         int index);
 
     /**
-     * <code>repeated .ItemParam return_item_list = 10;</code>
-     */
-    java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> 
-        getReturnItemListList();
-    /**
-     * <code>repeated .ItemParam return_item_list = 10;</code>
-     */
-    emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getReturnItemList(int index);
-    /**
-     * <code>repeated .ItemParam return_item_list = 10;</code>
-     */
-    int getReturnItemListCount();
-    /**
-     * <code>repeated .ItemParam return_item_list = 10;</code>
-     */
-    java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
-        getReturnItemListOrBuilderList();
-    /**
-     * <code>repeated .ItemParam return_item_list = 10;</code>
-     */
-    emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getReturnItemListOrBuilder(
-        int index);
-
-    /**
-     * <code>int32 retcode = 1;</code>
+     * <code>int32 retcode = 5;</code>
      * @return The retcode.
      */
     int getRetcode();
 
     /**
-     * <code>repeated .ItemParam output_item_list = 9;</code>
+     * <code>repeated .ItemParam return_item_list = 9;</code>
+     */
+    java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> 
+        getReturnItemListList();
+    /**
+     * <code>repeated .ItemParam return_item_list = 9;</code>
+     */
+    emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getReturnItemList(int index);
+    /**
+     * <code>repeated .ItemParam return_item_list = 9;</code>
+     */
+    int getReturnItemListCount();
+    /**
+     * <code>repeated .ItemParam return_item_list = 9;</code>
+     */
+    java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
+        getReturnItemListOrBuilderList();
+    /**
+     * <code>repeated .ItemParam return_item_list = 9;</code>
+     */
+    emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getReturnItemListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .ItemParam output_item_list = 14;</code>
      */
     java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> 
         getOutputItemListList();
     /**
-     * <code>repeated .ItemParam output_item_list = 9;</code>
+     * <code>repeated .ItemParam output_item_list = 14;</code>
      */
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getOutputItemList(int index);
     /**
-     * <code>repeated .ItemParam output_item_list = 9;</code>
+     * <code>repeated .ItemParam output_item_list = 14;</code>
      */
     int getOutputItemListCount();
     /**
-     * <code>repeated .ItemParam output_item_list = 9;</code>
+     * <code>repeated .ItemParam output_item_list = 14;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
         getOutputItemListOrBuilderList();
     /**
-     * <code>repeated .ItemParam output_item_list = 9;</code>
+     * <code>repeated .ItemParam output_item_list = 14;</code>
      */
     emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getOutputItemListOrBuilder(
         int index);
   }
   /**
    * <pre>
-   * CmdId: 656
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
+   * CmdId: 649
+   * Obf: DDDGJIMOHAN
    * </pre>
    *
    * Protobuf type {@code ForgeQueueManipulateRsp}
@@ -164,27 +162,21 @@ public final class ForgeQueueManipulateRspOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                extraOutputItemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              extraOutputItemList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(), extensionRegistry));
+              break;
+            }
+            case 40: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 32: {
-              int rawValue = input.readEnum();
-
-              manipulateType_ = rawValue;
-              break;
-            }
             case 74: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                outputItemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              outputItemList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(), extensionRegistry));
-              break;
-            }
-            case 82: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 returnItemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
                 mutable_bitField0_ |= 0x00000002;
@@ -193,12 +185,18 @@ public final class ForgeQueueManipulateRspOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(), extensionRegistry));
               break;
             }
-            case 106: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                extraOutputItemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
-                mutable_bitField0_ |= 0x00000001;
+            case 80: {
+              int rawValue = input.readEnum();
+
+              manipulateType_ = rawValue;
+              break;
+            }
+            case 114: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                outputItemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
+                mutable_bitField0_ |= 0x00000004;
               }
-              extraOutputItemList_.add(
+              outputItemList_.add(
                   input.readMessage(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(), extensionRegistry));
               break;
             }
@@ -217,14 +215,14 @@ public final class ForgeQueueManipulateRspOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          outputItemList_ = java.util.Collections.unmodifiableList(outputItemList_);
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          extraOutputItemList_ = java.util.Collections.unmodifiableList(extraOutputItemList_);
         }
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
           returnItemList_ = java.util.Collections.unmodifiableList(returnItemList_);
         }
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          extraOutputItemList_ = java.util.Collections.unmodifiableList(extraOutputItemList_);
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          outputItemList_ = java.util.Collections.unmodifiableList(outputItemList_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -243,17 +241,17 @@ public final class ForgeQueueManipulateRspOuterClass {
               emu.grasscutter.net.proto.ForgeQueueManipulateRspOuterClass.ForgeQueueManipulateRsp.class, emu.grasscutter.net.proto.ForgeQueueManipulateRspOuterClass.ForgeQueueManipulateRsp.Builder.class);
     }
 
-    public static final int MANIPULATE_TYPE_FIELD_NUMBER = 4;
+    public static final int MANIPULATE_TYPE_FIELD_NUMBER = 10;
     private int manipulateType_;
     /**
-     * <code>.ForgeQueueManipulateType manipulate_type = 4;</code>
+     * <code>.ForgeQueueManipulateType manipulate_type = 10;</code>
      * @return The enum numeric value on the wire for manipulateType.
      */
     @java.lang.Override public int getManipulateTypeValue() {
       return manipulateType_;
     }
     /**
-     * <code>.ForgeQueueManipulateType manipulate_type = 4;</code>
+     * <code>.ForgeQueueManipulateType manipulate_type = 10;</code>
      * @return The manipulateType.
      */
     @java.lang.Override public emu.grasscutter.net.proto.ForgeQueueManipulateTypeOuterClass.ForgeQueueManipulateType getManipulateType() {
@@ -262,17 +260,17 @@ public final class ForgeQueueManipulateRspOuterClass {
       return result == null ? emu.grasscutter.net.proto.ForgeQueueManipulateTypeOuterClass.ForgeQueueManipulateType.UNRECOGNIZED : result;
     }
 
-    public static final int EXTRA_OUTPUT_ITEM_LIST_FIELD_NUMBER = 13;
+    public static final int EXTRA_OUTPUT_ITEM_LIST_FIELD_NUMBER = 1;
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> extraOutputItemList_;
     /**
-     * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+     * <code>repeated .ItemParam extra_output_item_list = 1;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getExtraOutputItemListList() {
       return extraOutputItemList_;
     }
     /**
-     * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+     * <code>repeated .ItemParam extra_output_item_list = 1;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
@@ -280,21 +278,21 @@ public final class ForgeQueueManipulateRspOuterClass {
       return extraOutputItemList_;
     }
     /**
-     * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+     * <code>repeated .ItemParam extra_output_item_list = 1;</code>
      */
     @java.lang.Override
     public int getExtraOutputItemListCount() {
       return extraOutputItemList_.size();
     }
     /**
-     * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+     * <code>repeated .ItemParam extra_output_item_list = 1;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getExtraOutputItemList(int index) {
       return extraOutputItemList_.get(index);
     }
     /**
-     * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+     * <code>repeated .ItemParam extra_output_item_list = 1;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getExtraOutputItemListOrBuilder(
@@ -302,50 +300,10 @@ public final class ForgeQueueManipulateRspOuterClass {
       return extraOutputItemList_.get(index);
     }
 
-    public static final int RETURN_ITEM_LIST_FIELD_NUMBER = 10;
-    private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> returnItemList_;
-    /**
-     * <code>repeated .ItemParam return_item_list = 10;</code>
-     */
-    @java.lang.Override
-    public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getReturnItemListList() {
-      return returnItemList_;
-    }
-    /**
-     * <code>repeated .ItemParam return_item_list = 10;</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
-        getReturnItemListOrBuilderList() {
-      return returnItemList_;
-    }
-    /**
-     * <code>repeated .ItemParam return_item_list = 10;</code>
-     */
-    @java.lang.Override
-    public int getReturnItemListCount() {
-      return returnItemList_.size();
-    }
-    /**
-     * <code>repeated .ItemParam return_item_list = 10;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getReturnItemList(int index) {
-      return returnItemList_.get(index);
-    }
-    /**
-     * <code>repeated .ItemParam return_item_list = 10;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getReturnItemListOrBuilder(
-        int index) {
-      return returnItemList_.get(index);
-    }
-
-    public static final int RETCODE_FIELD_NUMBER = 1;
+    public static final int RETCODE_FIELD_NUMBER = 5;
     private int retcode_;
     /**
-     * <code>int32 retcode = 1;</code>
+     * <code>int32 retcode = 5;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -353,17 +311,57 @@ public final class ForgeQueueManipulateRspOuterClass {
       return retcode_;
     }
 
-    public static final int OUTPUT_ITEM_LIST_FIELD_NUMBER = 9;
+    public static final int RETURN_ITEM_LIST_FIELD_NUMBER = 9;
+    private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> returnItemList_;
+    /**
+     * <code>repeated .ItemParam return_item_list = 9;</code>
+     */
+    @java.lang.Override
+    public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getReturnItemListList() {
+      return returnItemList_;
+    }
+    /**
+     * <code>repeated .ItemParam return_item_list = 9;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
+        getReturnItemListOrBuilderList() {
+      return returnItemList_;
+    }
+    /**
+     * <code>repeated .ItemParam return_item_list = 9;</code>
+     */
+    @java.lang.Override
+    public int getReturnItemListCount() {
+      return returnItemList_.size();
+    }
+    /**
+     * <code>repeated .ItemParam return_item_list = 9;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getReturnItemList(int index) {
+      return returnItemList_.get(index);
+    }
+    /**
+     * <code>repeated .ItemParam return_item_list = 9;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getReturnItemListOrBuilder(
+        int index) {
+      return returnItemList_.get(index);
+    }
+
+    public static final int OUTPUT_ITEM_LIST_FIELD_NUMBER = 14;
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> outputItemList_;
     /**
-     * <code>repeated .ItemParam output_item_list = 9;</code>
+     * <code>repeated .ItemParam output_item_list = 14;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getOutputItemListList() {
       return outputItemList_;
     }
     /**
-     * <code>repeated .ItemParam output_item_list = 9;</code>
+     * <code>repeated .ItemParam output_item_list = 14;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
@@ -371,21 +369,21 @@ public final class ForgeQueueManipulateRspOuterClass {
       return outputItemList_;
     }
     /**
-     * <code>repeated .ItemParam output_item_list = 9;</code>
+     * <code>repeated .ItemParam output_item_list = 14;</code>
      */
     @java.lang.Override
     public int getOutputItemListCount() {
       return outputItemList_.size();
     }
     /**
-     * <code>repeated .ItemParam output_item_list = 9;</code>
+     * <code>repeated .ItemParam output_item_list = 14;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getOutputItemList(int index) {
       return outputItemList_.get(index);
     }
     /**
-     * <code>repeated .ItemParam output_item_list = 9;</code>
+     * <code>repeated .ItemParam output_item_list = 14;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getOutputItemListOrBuilder(
@@ -407,20 +405,20 @@ public final class ForgeQueueManipulateRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      for (int i = 0; i < extraOutputItemList_.size(); i++) {
+        output.writeMessage(1, extraOutputItemList_.get(i));
+      }
       if (retcode_ != 0) {
-        output.writeInt32(1, retcode_);
-      }
-      if (manipulateType_ != emu.grasscutter.net.proto.ForgeQueueManipulateTypeOuterClass.ForgeQueueManipulateType.FORGE_QUEUE_MANIPULATE_TYPE_RECEIVE_OUTPUT.getNumber()) {
-        output.writeEnum(4, manipulateType_);
-      }
-      for (int i = 0; i < outputItemList_.size(); i++) {
-        output.writeMessage(9, outputItemList_.get(i));
+        output.writeInt32(5, retcode_);
       }
       for (int i = 0; i < returnItemList_.size(); i++) {
-        output.writeMessage(10, returnItemList_.get(i));
+        output.writeMessage(9, returnItemList_.get(i));
       }
-      for (int i = 0; i < extraOutputItemList_.size(); i++) {
-        output.writeMessage(13, extraOutputItemList_.get(i));
+      if (manipulateType_ != emu.grasscutter.net.proto.ForgeQueueManipulateTypeOuterClass.ForgeQueueManipulateType.FORGE_QUEUE_MANIPULATE_TYPE_RECEIVE_OUTPUT.getNumber()) {
+        output.writeEnum(10, manipulateType_);
+      }
+      for (int i = 0; i < outputItemList_.size(); i++) {
+        output.writeMessage(14, outputItemList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -431,25 +429,25 @@ public final class ForgeQueueManipulateRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      for (int i = 0; i < extraOutputItemList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, extraOutputItemList_.get(i));
+      }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, retcode_);
-      }
-      if (manipulateType_ != emu.grasscutter.net.proto.ForgeQueueManipulateTypeOuterClass.ForgeQueueManipulateType.FORGE_QUEUE_MANIPULATE_TYPE_RECEIVE_OUTPUT.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, manipulateType_);
-      }
-      for (int i = 0; i < outputItemList_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, outputItemList_.get(i));
+          .computeInt32Size(5, retcode_);
       }
       for (int i = 0; i < returnItemList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, returnItemList_.get(i));
+          .computeMessageSize(9, returnItemList_.get(i));
       }
-      for (int i = 0; i < extraOutputItemList_.size(); i++) {
+      if (manipulateType_ != emu.grasscutter.net.proto.ForgeQueueManipulateTypeOuterClass.ForgeQueueManipulateType.FORGE_QUEUE_MANIPULATE_TYPE_RECEIVE_OUTPUT.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, extraOutputItemList_.get(i));
+          .computeEnumSize(10, manipulateType_);
+      }
+      for (int i = 0; i < outputItemList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, outputItemList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -469,10 +467,10 @@ public final class ForgeQueueManipulateRspOuterClass {
       if (manipulateType_ != other.manipulateType_) return false;
       if (!getExtraOutputItemListList()
           .equals(other.getExtraOutputItemListList())) return false;
-      if (!getReturnItemListList()
-          .equals(other.getReturnItemListList())) return false;
       if (getRetcode()
           != other.getRetcode()) return false;
+      if (!getReturnItemListList()
+          .equals(other.getReturnItemListList())) return false;
       if (!getOutputItemListList()
           .equals(other.getOutputItemListList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -492,12 +490,12 @@ public final class ForgeQueueManipulateRspOuterClass {
         hash = (37 * hash) + EXTRA_OUTPUT_ITEM_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getExtraOutputItemListList().hashCode();
       }
+      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRetcode();
       if (getReturnItemListCount() > 0) {
         hash = (37 * hash) + RETURN_ITEM_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getReturnItemListList().hashCode();
       }
-      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
-      hash = (53 * hash) + getRetcode();
       if (getOutputItemListCount() > 0) {
         hash = (37 * hash) + OUTPUT_ITEM_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getOutputItemListList().hashCode();
@@ -599,10 +597,8 @@ public final class ForgeQueueManipulateRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 656
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
+     * CmdId: 649
+     * Obf: DDDGJIMOHAN
      * </pre>
      *
      * Protobuf type {@code ForgeQueueManipulateRsp}
@@ -653,14 +649,14 @@ public final class ForgeQueueManipulateRspOuterClass {
         } else {
           extraOutputItemListBuilder_.clear();
         }
+        retcode_ = 0;
+
         if (returnItemListBuilder_ == null) {
           returnItemList_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           returnItemListBuilder_.clear();
         }
-        retcode_ = 0;
-
         if (outputItemListBuilder_ == null) {
           outputItemList_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000004);
@@ -704,6 +700,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         } else {
           result.extraOutputItemList_ = extraOutputItemListBuilder_.build();
         }
+        result.retcode_ = retcode_;
         if (returnItemListBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0)) {
             returnItemList_ = java.util.Collections.unmodifiableList(returnItemList_);
@@ -713,7 +710,6 @@ public final class ForgeQueueManipulateRspOuterClass {
         } else {
           result.returnItemList_ = returnItemListBuilder_.build();
         }
-        result.retcode_ = retcode_;
         if (outputItemListBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0)) {
             outputItemList_ = java.util.Collections.unmodifiableList(outputItemList_);
@@ -800,6 +796,9 @@ public final class ForgeQueueManipulateRspOuterClass {
             }
           }
         }
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
+        }
         if (returnItemListBuilder_ == null) {
           if (!other.returnItemList_.isEmpty()) {
             if (returnItemList_.isEmpty()) {
@@ -825,9 +824,6 @@ public final class ForgeQueueManipulateRspOuterClass {
               returnItemListBuilder_.addAllMessages(other.returnItemList_);
             }
           }
-        }
-        if (other.getRetcode() != 0) {
-          setRetcode(other.getRetcode());
         }
         if (outputItemListBuilder_ == null) {
           if (!other.outputItemList_.isEmpty()) {
@@ -887,14 +883,14 @@ public final class ForgeQueueManipulateRspOuterClass {
 
       private int manipulateType_ = 0;
       /**
-       * <code>.ForgeQueueManipulateType manipulate_type = 4;</code>
+       * <code>.ForgeQueueManipulateType manipulate_type = 10;</code>
        * @return The enum numeric value on the wire for manipulateType.
        */
       @java.lang.Override public int getManipulateTypeValue() {
         return manipulateType_;
       }
       /**
-       * <code>.ForgeQueueManipulateType manipulate_type = 4;</code>
+       * <code>.ForgeQueueManipulateType manipulate_type = 10;</code>
        * @param value The enum numeric value on the wire for manipulateType to set.
        * @return This builder for chaining.
        */
@@ -905,7 +901,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>.ForgeQueueManipulateType manipulate_type = 4;</code>
+       * <code>.ForgeQueueManipulateType manipulate_type = 10;</code>
        * @return The manipulateType.
        */
       @java.lang.Override
@@ -915,7 +911,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return result == null ? emu.grasscutter.net.proto.ForgeQueueManipulateTypeOuterClass.ForgeQueueManipulateType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.ForgeQueueManipulateType manipulate_type = 4;</code>
+       * <code>.ForgeQueueManipulateType manipulate_type = 10;</code>
        * @param value The manipulateType to set.
        * @return This builder for chaining.
        */
@@ -929,7 +925,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>.ForgeQueueManipulateType manipulate_type = 4;</code>
+       * <code>.ForgeQueueManipulateType manipulate_type = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearManipulateType() {
@@ -952,7 +948,7 @@ public final class ForgeQueueManipulateRspOuterClass {
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> extraOutputItemListBuilder_;
 
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getExtraOutputItemListList() {
         if (extraOutputItemListBuilder_ == null) {
@@ -962,7 +958,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public int getExtraOutputItemListCount() {
         if (extraOutputItemListBuilder_ == null) {
@@ -972,7 +968,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getExtraOutputItemList(int index) {
         if (extraOutputItemListBuilder_ == null) {
@@ -982,7 +978,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public Builder setExtraOutputItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
@@ -999,7 +995,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public Builder setExtraOutputItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -1013,7 +1009,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public Builder addExtraOutputItemList(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
         if (extraOutputItemListBuilder_ == null) {
@@ -1029,7 +1025,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public Builder addExtraOutputItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
@@ -1046,7 +1042,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public Builder addExtraOutputItemList(
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -1060,7 +1056,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public Builder addExtraOutputItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -1074,7 +1070,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public Builder addAllExtraOutputItemList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> values) {
@@ -1089,7 +1085,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public Builder clearExtraOutputItemList() {
         if (extraOutputItemListBuilder_ == null) {
@@ -1102,7 +1098,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public Builder removeExtraOutputItemList(int index) {
         if (extraOutputItemListBuilder_ == null) {
@@ -1115,14 +1111,14 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder getExtraOutputItemListBuilder(
           int index) {
         return getExtraOutputItemListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getExtraOutputItemListOrBuilder(
           int index) {
@@ -1132,7 +1128,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
            getExtraOutputItemListOrBuilderList() {
@@ -1143,14 +1139,14 @@ public final class ForgeQueueManipulateRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addExtraOutputItemListBuilder() {
         return getExtraOutputItemListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addExtraOutputItemListBuilder(
           int index) {
@@ -1158,7 +1154,7 @@ public final class ForgeQueueManipulateRspOuterClass {
             index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .ItemParam extra_output_item_list = 13;</code>
+       * <code>repeated .ItemParam extra_output_item_list = 1;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder> 
            getExtraOutputItemListBuilderList() {
@@ -1179,6 +1175,37 @@ public final class ForgeQueueManipulateRspOuterClass {
         return extraOutputItemListBuilder_;
       }
 
+      private int retcode_ ;
+      /**
+       * <code>int32 retcode = 5;</code>
+       * @return The retcode.
+       */
+      @java.lang.Override
+      public int getRetcode() {
+        return retcode_;
+      }
+      /**
+       * <code>int32 retcode = 5;</code>
+       * @param value The retcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetcode(int value) {
+        
+        retcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 retcode = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetcode() {
+        
+        retcode_ = 0;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> returnItemList_ =
         java.util.Collections.emptyList();
       private void ensureReturnItemListIsMutable() {
@@ -1192,7 +1219,7 @@ public final class ForgeQueueManipulateRspOuterClass {
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> returnItemListBuilder_;
 
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getReturnItemListList() {
         if (returnItemListBuilder_ == null) {
@@ -1202,7 +1229,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public int getReturnItemListCount() {
         if (returnItemListBuilder_ == null) {
@@ -1212,7 +1239,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getReturnItemList(int index) {
         if (returnItemListBuilder_ == null) {
@@ -1222,7 +1249,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public Builder setReturnItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
@@ -1239,7 +1266,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public Builder setReturnItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -1253,7 +1280,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public Builder addReturnItemList(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
         if (returnItemListBuilder_ == null) {
@@ -1269,7 +1296,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public Builder addReturnItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
@@ -1286,7 +1313,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public Builder addReturnItemList(
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -1300,7 +1327,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public Builder addReturnItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -1314,7 +1341,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public Builder addAllReturnItemList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> values) {
@@ -1329,7 +1356,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public Builder clearReturnItemList() {
         if (returnItemListBuilder_ == null) {
@@ -1342,7 +1369,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public Builder removeReturnItemList(int index) {
         if (returnItemListBuilder_ == null) {
@@ -1355,14 +1382,14 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder getReturnItemListBuilder(
           int index) {
         return getReturnItemListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getReturnItemListOrBuilder(
           int index) {
@@ -1372,7 +1399,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
            getReturnItemListOrBuilderList() {
@@ -1383,14 +1410,14 @@ public final class ForgeQueueManipulateRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addReturnItemListBuilder() {
         return getReturnItemListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addReturnItemListBuilder(
           int index) {
@@ -1398,7 +1425,7 @@ public final class ForgeQueueManipulateRspOuterClass {
             index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .ItemParam return_item_list = 10;</code>
+       * <code>repeated .ItemParam return_item_list = 9;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder> 
            getReturnItemListBuilderList() {
@@ -1419,37 +1446,6 @@ public final class ForgeQueueManipulateRspOuterClass {
         return returnItemListBuilder_;
       }
 
-      private int retcode_ ;
-      /**
-       * <code>int32 retcode = 1;</code>
-       * @return The retcode.
-       */
-      @java.lang.Override
-      public int getRetcode() {
-        return retcode_;
-      }
-      /**
-       * <code>int32 retcode = 1;</code>
-       * @param value The retcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRetcode(int value) {
-        
-        retcode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 retcode = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRetcode() {
-        
-        retcode_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> outputItemList_ =
         java.util.Collections.emptyList();
       private void ensureOutputItemListIsMutable() {
@@ -1463,7 +1459,7 @@ public final class ForgeQueueManipulateRspOuterClass {
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> outputItemListBuilder_;
 
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> getOutputItemListList() {
         if (outputItemListBuilder_ == null) {
@@ -1473,7 +1469,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public int getOutputItemListCount() {
         if (outputItemListBuilder_ == null) {
@@ -1483,7 +1479,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam getOutputItemList(int index) {
         if (outputItemListBuilder_ == null) {
@@ -1493,7 +1489,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public Builder setOutputItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
@@ -1510,7 +1506,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public Builder setOutputItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -1524,7 +1520,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public Builder addOutputItemList(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
         if (outputItemListBuilder_ == null) {
@@ -1540,7 +1536,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public Builder addOutputItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam value) {
@@ -1557,7 +1553,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public Builder addOutputItemList(
           emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -1571,7 +1567,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public Builder addOutputItemList(
           int index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder builderForValue) {
@@ -1585,7 +1581,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public Builder addAllOutputItemList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> values) {
@@ -1600,7 +1596,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public Builder clearOutputItemList() {
         if (outputItemListBuilder_ == null) {
@@ -1613,7 +1609,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public Builder removeOutputItemList(int index) {
         if (outputItemListBuilder_ == null) {
@@ -1626,14 +1622,14 @@ public final class ForgeQueueManipulateRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder getOutputItemListBuilder(
           int index) {
         return getOutputItemListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder getOutputItemListOrBuilder(
           int index) {
@@ -1643,7 +1639,7 @@ public final class ForgeQueueManipulateRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.ItemParamOuterClass.ItemParamOrBuilder> 
            getOutputItemListOrBuilderList() {
@@ -1654,14 +1650,14 @@ public final class ForgeQueueManipulateRspOuterClass {
         }
       }
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addOutputItemListBuilder() {
         return getOutputItemListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder addOutputItemListBuilder(
           int index) {
@@ -1669,7 +1665,7 @@ public final class ForgeQueueManipulateRspOuterClass {
             index, emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.getDefaultInstance());
       }
       /**
-       * <code>repeated .ItemParam output_item_list = 9;</code>
+       * <code>repeated .ItemParam output_item_list = 14;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder> 
            getOutputItemListBuilderList() {
@@ -1759,11 +1755,11 @@ public final class ForgeQueueManipulateRspOuterClass {
       "\n\035ForgeQueueManipulateRsp.proto\032\036ForgeQu" +
       "eueManipulateType.proto\032\017ItemParam.proto" +
       "\"\326\001\n\027ForgeQueueManipulateRsp\0222\n\017manipula" +
-      "te_type\030\004 \001(\0162\031.ForgeQueueManipulateType" +
-      "\022*\n\026extra_output_item_list\030\r \003(\0132\n.ItemP" +
-      "aram\022$\n\020return_item_list\030\n \003(\0132\n.ItemPar" +
-      "am\022\017\n\007retcode\030\001 \001(\005\022$\n\020output_item_list\030" +
-      "\t \003(\0132\n.ItemParamB\033\n\031emu.grasscutter.net" +
+      "te_type\030\n \001(\0162\031.ForgeQueueManipulateType" +
+      "\022*\n\026extra_output_item_list\030\001 \003(\0132\n.ItemP" +
+      "aram\022\017\n\007retcode\030\005 \001(\005\022$\n\020return_item_lis" +
+      "t\030\t \003(\0132\n.ItemParam\022$\n\020output_item_list\030" +
+      "\016 \003(\0132\n.ItemParamB\033\n\031emu.grasscutter.net" +
       ".protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -1777,7 +1773,7 @@ public final class ForgeQueueManipulateRspOuterClass {
     internal_static_ForgeQueueManipulateRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ForgeQueueManipulateRsp_descriptor,
-        new java.lang.String[] { "ManipulateType", "ExtraOutputItemList", "ReturnItemList", "Retcode", "OutputItemList", });
+        new java.lang.String[] { "ManipulateType", "ExtraOutputItemList", "Retcode", "ReturnItemList", "OutputItemList", });
     emu.grasscutter.net.proto.ForgeQueueManipulateTypeOuterClass.getDescriptor();
     emu.grasscutter.net.proto.ItemParamOuterClass.getDescriptor();
   }

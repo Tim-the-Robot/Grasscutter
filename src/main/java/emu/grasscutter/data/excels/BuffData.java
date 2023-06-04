@@ -13,6 +13,8 @@ public class BuffData extends GameResource {
     private float time;
     private boolean isPersistent;
     private ServerBuffType serverBuffType;
+    private String abilityName;
+    private String modifierName;
 
     @Override
     public int getId() {
@@ -20,6 +22,7 @@ public class BuffData extends GameResource {
     }
 
     public void onLoad() {
-        this.serverBuffType = this.serverBuffType != null ? this.serverBuffType : ServerBuffType.SERVER_BUFF_NONE;
+        this.serverBuffType =
+                this.serverBuffType != null ? this.serverBuffType : ServerBuffType.SERVER_BUFF_NONE;
     }
 }

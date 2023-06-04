@@ -8,7 +8,6 @@ import emu.grasscutter.data.excels.CombineData;
 import emu.grasscutter.game.inventory.GameItem;
 import emu.grasscutter.game.player.Player;
 import emu.grasscutter.game.props.ActionReason;
-import emu.grasscutter.game.props.ItemUseOp;
 import emu.grasscutter.net.proto.RetcodeOuterClass;
 import emu.grasscutter.net.proto.RetcodeOuterClass.Retcode;
 import emu.grasscutter.server.game.BaseGameSystem;
@@ -19,12 +18,12 @@ import emu.grasscutter.server.packet.send.PacketReliquaryDecomposeRsp;
 import emu.grasscutter.utils.Utils;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class CombineManger extends BaseGameSystem {
-    private final static Int2ObjectMap<List<Integer>> reliquaryDecomposeData = new Int2ObjectOpenHashMap<>();
+    private static final Int2ObjectMap<List<Integer>> reliquaryDecomposeData =
+            new Int2ObjectOpenHashMap<>();
 
     public CombineManger(GameServer server) {
         super(server);
@@ -33,34 +32,24 @@ public class CombineManger extends BaseGameSystem {
     public static void initialize() {
         // Read the data we need for strongbox.
         try {
-            DataLoader.loadList("ReliquaryDecompose.json", ReliquaryDecomposeEntry.class).forEach(entry -> {
-                reliquaryDecomposeData.put(entry.getConfigId(), entry.getItems());
-            });
-            Grasscutter.getLogger().debug("Loaded {} reliquary decompose entries.", reliquaryDecomposeData.size());
-        }
-        catch (Exception ex) {
+            DataLoader.loadList("ReliquaryDecompose.json", ReliquaryDecomposeEntry.class)
+                    .forEach(
+                            entry -> {
+                                reliquaryDecomposeData.put(entry.getConfigId(), entry.getItems());
+                            });
+            Grasscutter.getLogger()
+                    .debug("Loaded {} reliquary decompose entries.", reliquaryDecomposeData.size());
+        } catch (Exception ex) {
             Grasscutter.getLogger().error("Unable to load reliquary decompose data.", ex);
         }
     }
 
-    public boolean unlockCombineDiagram(Player player, GameItem diagramItem) {
-        // Make sure this is actually a diagram.
-        if (diagramItem.getItemData().getItemUse().get(0).getUseOp() != ItemUseOp.ITEM_USE_UNLOCK_COMBINE) {
-            return false;
+    public boolean unlockCombineDiagram(Player player, int combineId) {
+        if (!player.getUnlockedCombines().add(combineId)) {
+            return false; // Already unlocked
         }
-
-        // Determine the combine item we should unlock.
-        int combineId = Integer.parseInt(diagramItem.getItemData().getItemUse().get(0).getUseParam()[0]);
-
-        // Remove the diagram from the player's inventory.
-        // We need to do this here, before sending CombineFormulaDataNotify, or the the combine UI won't correctly
-        // update when unlocking the diagram.
-        player.getInventory().removeItem(diagramItem, 1);
-
         // Tell the client that this diagram is now unlocked and add the unlocked item to the player.
-        player.getUnlockedCombines().add(combineId);
         player.sendPacket(new PacketCombineFormulaDataNotify(combineId));
-
         return true;
     }
 
@@ -85,17 +74,21 @@ public class CombineManger extends BaseGameSystem {
 
         // abort if not enough material
         if (!success) {
-            player.sendPacket(new PacketCombineRsp(RetcodeOuterClass.Retcode.RET_ITEM_COMBINE_COUNT_NOT_ENOUGH_VALUE));
+            player.sendPacket(
+                    new PacketCombineRsp(RetcodeOuterClass.Retcode.RET_ITEM_COMBINE_COUNT_NOT_ENOUGH_VALUE));
         }
 
         // make the result
-        player.getInventory().addItem(combineData.getResultItemId(),
-                combineData.getResultItemCount() * count);
+        player
+                .getInventory()
+                .addItem(combineData.getResultItemId(), combineData.getResultItemCount() * count);
 
         CombineResult result = new CombineResult();
         result.setMaterial(List.of());
-        result.setResult(List.of(new ItemParamData(combineData.getResultItemId(),
-                combineData.getResultItemCount() * count)));
+        result.setResult(
+                List.of(
+                        new ItemParamData(
+                                combineData.getResultItemId(), combineData.getResultItemCount() * count)));
         // TODO lucky characters
         result.setExtra(List.of());
         result.setBack(List.of());
@@ -103,24 +96,28 @@ public class CombineManger extends BaseGameSystem {
         return result;
     }
 
-    public synchronized void decomposeReliquaries(Player player, int configId, int count, List<Long> input) {
+    public synchronized void decomposeReliquaries(
+            Player player, int configId, int count, List<Long> input) {
         // Check if the configId is legal.
         List<Integer> possibleDrops = reliquaryDecomposeData.get(configId);
         if (possibleDrops == null) {
-            player.sendPacket(new PacketReliquaryDecomposeRsp(Retcode.RET_RELIQUARY_DECOMPOSE_PARAM_ERROR));
+            player.sendPacket(
+                    new PacketReliquaryDecomposeRsp(Retcode.RET_RELIQUARY_DECOMPOSE_PARAM_ERROR));
             return;
         }
 
         // Check if the number of input items matches the output count.
         if (input.size() != count * 3) {
-            player.sendPacket(new PacketReliquaryDecomposeRsp(Retcode.RET_RELIQUARY_DECOMPOSE_PARAM_ERROR));
+            player.sendPacket(
+                    new PacketReliquaryDecomposeRsp(Retcode.RET_RELIQUARY_DECOMPOSE_PARAM_ERROR));
             return;
         }
 
         // Check if all the input reliquaries actually are in the player's inventory.
         for (long guid : input) {
             if (player.getInventory().getItemByGuid(guid) == null) {
-                player.sendPacket(new PacketReliquaryDecomposeRsp(Retcode.RET_RELIQUARY_DECOMPOSE_PARAM_ERROR));
+                player.sendPacket(
+                        new PacketReliquaryDecomposeRsp(Retcode.RET_RELIQUARY_DECOMPOSE_PARAM_ERROR));
                 return;
             }
         }

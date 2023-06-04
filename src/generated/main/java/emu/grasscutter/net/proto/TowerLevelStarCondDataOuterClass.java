@@ -19,30 +19,34 @@ public final class TowerLevelStarCondDataOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool Unk2700_HIFMJMAHEMB = 15;</code>
-     * @return The unk2700HIFMJMAHEMB.
+     * <code>uint32 star_cond_index = 15;</code>
+     * @return The starCondIndex.
      */
-    boolean getUnk2700HIFMJMAHEMB();
+    int getStarCondIndex();
 
     /**
-     * <code>uint32 cond_value = 9;</code>
+     * <code>uint32 cond_value = 7;</code>
      * @return The condValue.
      */
     int getCondValue();
 
     /**
-     * <code>bool is_pause = 13;</code>
-     * @return The isPause.
+     * <code>bool HHFLBKFMCIH = 4;</code>
+     * @return The hHFLBKFMCIH.
      */
-    boolean getIsPause();
+    boolean getHHFLBKFMCIH();
 
     /**
-     * <code>uint32 star_cond_index = 6;</code>
-     * @return The starCondIndex.
+     * <code>bool DJEMLDOFGLI = 11;</code>
+     * @return The dJEMLDOFGLI.
      */
-    int getStarCondIndex();
+    boolean getDJEMLDOFGLI();
   }
   /**
+   * <pre>
+   * Obf: BGEPDKGLCMN
+   * </pre>
+   *
    * Protobuf type {@code TowerLevelStarCondData}
    */
   public static final class TowerLevelStarCondData extends
@@ -87,24 +91,24 @@ public final class TowerLevelStarCondDataOuterClass {
             case 0:
               done = true;
               break;
-            case 48: {
+            case 32: {
 
-              starCondIndex_ = input.readUInt32();
+              hHFLBKFMCIH_ = input.readBool();
               break;
             }
-            case 72: {
+            case 56: {
 
               condValue_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 88: {
 
-              isPause_ = input.readBool();
+              dJEMLDOFGLI_ = input.readBool();
               break;
             }
             case 120: {
 
-              unk2700HIFMJMAHEMB_ = input.readBool();
+              starCondIndex_ = input.readUInt32();
               break;
             }
             default: {
@@ -139,21 +143,21 @@ public final class TowerLevelStarCondDataOuterClass {
               emu.grasscutter.net.proto.TowerLevelStarCondDataOuterClass.TowerLevelStarCondData.class, emu.grasscutter.net.proto.TowerLevelStarCondDataOuterClass.TowerLevelStarCondData.Builder.class);
     }
 
-    public static final int UNK2700_HIFMJMAHEMB_FIELD_NUMBER = 15;
-    private boolean unk2700HIFMJMAHEMB_;
+    public static final int STAR_COND_INDEX_FIELD_NUMBER = 15;
+    private int starCondIndex_;
     /**
-     * <code>bool Unk2700_HIFMJMAHEMB = 15;</code>
-     * @return The unk2700HIFMJMAHEMB.
+     * <code>uint32 star_cond_index = 15;</code>
+     * @return The starCondIndex.
      */
     @java.lang.Override
-    public boolean getUnk2700HIFMJMAHEMB() {
-      return unk2700HIFMJMAHEMB_;
+    public int getStarCondIndex() {
+      return starCondIndex_;
     }
 
-    public static final int COND_VALUE_FIELD_NUMBER = 9;
+    public static final int COND_VALUE_FIELD_NUMBER = 7;
     private int condValue_;
     /**
-     * <code>uint32 cond_value = 9;</code>
+     * <code>uint32 cond_value = 7;</code>
      * @return The condValue.
      */
     @java.lang.Override
@@ -161,26 +165,26 @@ public final class TowerLevelStarCondDataOuterClass {
       return condValue_;
     }
 
-    public static final int IS_PAUSE_FIELD_NUMBER = 13;
-    private boolean isPause_;
+    public static final int HHFLBKFMCIH_FIELD_NUMBER = 4;
+    private boolean hHFLBKFMCIH_;
     /**
-     * <code>bool is_pause = 13;</code>
-     * @return The isPause.
+     * <code>bool HHFLBKFMCIH = 4;</code>
+     * @return The hHFLBKFMCIH.
      */
     @java.lang.Override
-    public boolean getIsPause() {
-      return isPause_;
+    public boolean getHHFLBKFMCIH() {
+      return hHFLBKFMCIH_;
     }
 
-    public static final int STAR_COND_INDEX_FIELD_NUMBER = 6;
-    private int starCondIndex_;
+    public static final int DJEMLDOFGLI_FIELD_NUMBER = 11;
+    private boolean dJEMLDOFGLI_;
     /**
-     * <code>uint32 star_cond_index = 6;</code>
-     * @return The starCondIndex.
+     * <code>bool DJEMLDOFGLI = 11;</code>
+     * @return The dJEMLDOFGLI.
      */
     @java.lang.Override
-    public int getStarCondIndex() {
-      return starCondIndex_;
+    public boolean getDJEMLDOFGLI() {
+      return dJEMLDOFGLI_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -197,17 +201,17 @@ public final class TowerLevelStarCondDataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (starCondIndex_ != 0) {
-        output.writeUInt32(6, starCondIndex_);
+      if (hHFLBKFMCIH_ != false) {
+        output.writeBool(4, hHFLBKFMCIH_);
       }
       if (condValue_ != 0) {
-        output.writeUInt32(9, condValue_);
+        output.writeUInt32(7, condValue_);
       }
-      if (isPause_ != false) {
-        output.writeBool(13, isPause_);
+      if (dJEMLDOFGLI_ != false) {
+        output.writeBool(11, dJEMLDOFGLI_);
       }
-      if (unk2700HIFMJMAHEMB_ != false) {
-        output.writeBool(15, unk2700HIFMJMAHEMB_);
+      if (starCondIndex_ != 0) {
+        output.writeUInt32(15, starCondIndex_);
       }
       unknownFields.writeTo(output);
     }
@@ -218,21 +222,21 @@ public final class TowerLevelStarCondDataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (starCondIndex_ != 0) {
+      if (hHFLBKFMCIH_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, starCondIndex_);
+          .computeBoolSize(4, hHFLBKFMCIH_);
       }
       if (condValue_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, condValue_);
+          .computeUInt32Size(7, condValue_);
       }
-      if (isPause_ != false) {
+      if (dJEMLDOFGLI_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(13, isPause_);
+          .computeBoolSize(11, dJEMLDOFGLI_);
       }
-      if (unk2700HIFMJMAHEMB_ != false) {
+      if (starCondIndex_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(15, unk2700HIFMJMAHEMB_);
+          .computeUInt32Size(15, starCondIndex_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -249,14 +253,14 @@ public final class TowerLevelStarCondDataOuterClass {
       }
       emu.grasscutter.net.proto.TowerLevelStarCondDataOuterClass.TowerLevelStarCondData other = (emu.grasscutter.net.proto.TowerLevelStarCondDataOuterClass.TowerLevelStarCondData) obj;
 
-      if (getUnk2700HIFMJMAHEMB()
-          != other.getUnk2700HIFMJMAHEMB()) return false;
-      if (getCondValue()
-          != other.getCondValue()) return false;
-      if (getIsPause()
-          != other.getIsPause()) return false;
       if (getStarCondIndex()
           != other.getStarCondIndex()) return false;
+      if (getCondValue()
+          != other.getCondValue()) return false;
+      if (getHHFLBKFMCIH()
+          != other.getHHFLBKFMCIH()) return false;
+      if (getDJEMLDOFGLI()
+          != other.getDJEMLDOFGLI()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -268,16 +272,16 @@ public final class TowerLevelStarCondDataOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + UNK2700_HIFMJMAHEMB_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUnk2700HIFMJMAHEMB());
-      hash = (37 * hash) + COND_VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getCondValue();
-      hash = (37 * hash) + IS_PAUSE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsPause());
       hash = (37 * hash) + STAR_COND_INDEX_FIELD_NUMBER;
       hash = (53 * hash) + getStarCondIndex();
+      hash = (37 * hash) + COND_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getCondValue();
+      hash = (37 * hash) + HHFLBKFMCIH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getHHFLBKFMCIH());
+      hash = (37 * hash) + DJEMLDOFGLI_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDJEMLDOFGLI());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -374,6 +378,10 @@ public final class TowerLevelStarCondDataOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Obf: BGEPDKGLCMN
+     * </pre>
+     *
      * Protobuf type {@code TowerLevelStarCondData}
      */
     public static final class Builder extends
@@ -411,13 +419,13 @@ public final class TowerLevelStarCondDataOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        unk2700HIFMJMAHEMB_ = false;
+        starCondIndex_ = 0;
 
         condValue_ = 0;
 
-        isPause_ = false;
+        hHFLBKFMCIH_ = false;
 
-        starCondIndex_ = 0;
+        dJEMLDOFGLI_ = false;
 
         return this;
       }
@@ -445,10 +453,10 @@ public final class TowerLevelStarCondDataOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.TowerLevelStarCondDataOuterClass.TowerLevelStarCondData buildPartial() {
         emu.grasscutter.net.proto.TowerLevelStarCondDataOuterClass.TowerLevelStarCondData result = new emu.grasscutter.net.proto.TowerLevelStarCondDataOuterClass.TowerLevelStarCondData(this);
-        result.unk2700HIFMJMAHEMB_ = unk2700HIFMJMAHEMB_;
-        result.condValue_ = condValue_;
-        result.isPause_ = isPause_;
         result.starCondIndex_ = starCondIndex_;
+        result.condValue_ = condValue_;
+        result.hHFLBKFMCIH_ = hHFLBKFMCIH_;
+        result.dJEMLDOFGLI_ = dJEMLDOFGLI_;
         onBuilt();
         return result;
       }
@@ -497,17 +505,17 @@ public final class TowerLevelStarCondDataOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.TowerLevelStarCondDataOuterClass.TowerLevelStarCondData other) {
         if (other == emu.grasscutter.net.proto.TowerLevelStarCondDataOuterClass.TowerLevelStarCondData.getDefaultInstance()) return this;
-        if (other.getUnk2700HIFMJMAHEMB() != false) {
-          setUnk2700HIFMJMAHEMB(other.getUnk2700HIFMJMAHEMB());
+        if (other.getStarCondIndex() != 0) {
+          setStarCondIndex(other.getStarCondIndex());
         }
         if (other.getCondValue() != 0) {
           setCondValue(other.getCondValue());
         }
-        if (other.getIsPause() != false) {
-          setIsPause(other.getIsPause());
+        if (other.getHHFLBKFMCIH() != false) {
+          setHHFLBKFMCIH(other.getHHFLBKFMCIH());
         }
-        if (other.getStarCondIndex() != 0) {
-          setStarCondIndex(other.getStarCondIndex());
+        if (other.getDJEMLDOFGLI() != false) {
+          setDJEMLDOFGLI(other.getDJEMLDOFGLI());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -538,102 +546,9 @@ public final class TowerLevelStarCondDataOuterClass {
         return this;
       }
 
-      private boolean unk2700HIFMJMAHEMB_ ;
-      /**
-       * <code>bool Unk2700_HIFMJMAHEMB = 15;</code>
-       * @return The unk2700HIFMJMAHEMB.
-       */
-      @java.lang.Override
-      public boolean getUnk2700HIFMJMAHEMB() {
-        return unk2700HIFMJMAHEMB_;
-      }
-      /**
-       * <code>bool Unk2700_HIFMJMAHEMB = 15;</code>
-       * @param value The unk2700HIFMJMAHEMB to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUnk2700HIFMJMAHEMB(boolean value) {
-        
-        unk2700HIFMJMAHEMB_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool Unk2700_HIFMJMAHEMB = 15;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUnk2700HIFMJMAHEMB() {
-        
-        unk2700HIFMJMAHEMB_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int condValue_ ;
-      /**
-       * <code>uint32 cond_value = 9;</code>
-       * @return The condValue.
-       */
-      @java.lang.Override
-      public int getCondValue() {
-        return condValue_;
-      }
-      /**
-       * <code>uint32 cond_value = 9;</code>
-       * @param value The condValue to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCondValue(int value) {
-        
-        condValue_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 cond_value = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCondValue() {
-        
-        condValue_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean isPause_ ;
-      /**
-       * <code>bool is_pause = 13;</code>
-       * @return The isPause.
-       */
-      @java.lang.Override
-      public boolean getIsPause() {
-        return isPause_;
-      }
-      /**
-       * <code>bool is_pause = 13;</code>
-       * @param value The isPause to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsPause(boolean value) {
-        
-        isPause_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_pause = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsPause() {
-        
-        isPause_ = false;
-        onChanged();
-        return this;
-      }
-
       private int starCondIndex_ ;
       /**
-       * <code>uint32 star_cond_index = 6;</code>
+       * <code>uint32 star_cond_index = 15;</code>
        * @return The starCondIndex.
        */
       @java.lang.Override
@@ -641,7 +556,7 @@ public final class TowerLevelStarCondDataOuterClass {
         return starCondIndex_;
       }
       /**
-       * <code>uint32 star_cond_index = 6;</code>
+       * <code>uint32 star_cond_index = 15;</code>
        * @param value The starCondIndex to set.
        * @return This builder for chaining.
        */
@@ -652,12 +567,105 @@ public final class TowerLevelStarCondDataOuterClass {
         return this;
       }
       /**
-       * <code>uint32 star_cond_index = 6;</code>
+       * <code>uint32 star_cond_index = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearStarCondIndex() {
         
         starCondIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int condValue_ ;
+      /**
+       * <code>uint32 cond_value = 7;</code>
+       * @return The condValue.
+       */
+      @java.lang.Override
+      public int getCondValue() {
+        return condValue_;
+      }
+      /**
+       * <code>uint32 cond_value = 7;</code>
+       * @param value The condValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCondValue(int value) {
+        
+        condValue_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 cond_value = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCondValue() {
+        
+        condValue_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean hHFLBKFMCIH_ ;
+      /**
+       * <code>bool HHFLBKFMCIH = 4;</code>
+       * @return The hHFLBKFMCIH.
+       */
+      @java.lang.Override
+      public boolean getHHFLBKFMCIH() {
+        return hHFLBKFMCIH_;
+      }
+      /**
+       * <code>bool HHFLBKFMCIH = 4;</code>
+       * @param value The hHFLBKFMCIH to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHHFLBKFMCIH(boolean value) {
+        
+        hHFLBKFMCIH_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool HHFLBKFMCIH = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHHFLBKFMCIH() {
+        
+        hHFLBKFMCIH_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean dJEMLDOFGLI_ ;
+      /**
+       * <code>bool DJEMLDOFGLI = 11;</code>
+       * @return The dJEMLDOFGLI.
+       */
+      @java.lang.Override
+      public boolean getDJEMLDOFGLI() {
+        return dJEMLDOFGLI_;
+      }
+      /**
+       * <code>bool DJEMLDOFGLI = 11;</code>
+       * @param value The dJEMLDOFGLI to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDJEMLDOFGLI(boolean value) {
+        
+        dJEMLDOFGLI_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool DJEMLDOFGLI = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDJEMLDOFGLI() {
+        
+        dJEMLDOFGLI_ = false;
         onChanged();
         return this;
       }
@@ -728,11 +736,11 @@ public final class TowerLevelStarCondDataOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\034TowerLevelStarCondData.proto\"t\n\026TowerL" +
-      "evelStarCondData\022\033\n\023Unk2700_HIFMJMAHEMB\030" +
-      "\017 \001(\010\022\022\n\ncond_value\030\t \001(\r\022\020\n\010is_pause\030\r " +
-      "\001(\010\022\027\n\017star_cond_index\030\006 \001(\rB\033\n\031emu.gras" +
-      "scutter.net.protob\006proto3"
+      "\n\034TowerLevelStarCondData.proto\"o\n\026TowerL" +
+      "evelStarCondData\022\027\n\017star_cond_index\030\017 \001(" +
+      "\r\022\022\n\ncond_value\030\007 \001(\r\022\023\n\013HHFLBKFMCIH\030\004 \001" +
+      "(\010\022\023\n\013DJEMLDOFGLI\030\013 \001(\010B\033\n\031emu.grasscutt" +
+      "er.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -743,7 +751,7 @@ public final class TowerLevelStarCondDataOuterClass {
     internal_static_TowerLevelStarCondData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_TowerLevelStarCondData_descriptor,
-        new java.lang.String[] { "Unk2700HIFMJMAHEMB", "CondValue", "IsPause", "StarCondIndex", });
+        new java.lang.String[] { "StarCondIndex", "CondValue", "HHFLBKFMCIH", "DJEMLDOFGLI", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

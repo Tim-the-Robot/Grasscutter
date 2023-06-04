@@ -19,17 +19,17 @@ public final class EntityAiSyncNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 local_avatar_alerted_monster_list = 15;</code>
+     * <code>repeated uint32 local_avatar_alerted_monster_list = 8;</code>
      * @return A list containing the localAvatarAlertedMonsterList.
      */
     java.util.List<java.lang.Integer> getLocalAvatarAlertedMonsterListList();
     /**
-     * <code>repeated uint32 local_avatar_alerted_monster_list = 15;</code>
+     * <code>repeated uint32 local_avatar_alerted_monster_list = 8;</code>
      * @return The count of localAvatarAlertedMonsterList.
      */
     int getLocalAvatarAlertedMonsterListCount();
     /**
-     * <code>repeated uint32 local_avatar_alerted_monster_list = 15;</code>
+     * <code>repeated uint32 local_avatar_alerted_monster_list = 8;</code>
      * @param index The index of the element to return.
      * @return The localAvatarAlertedMonsterList at the given index.
      */
@@ -61,10 +61,8 @@ public final class EntityAiSyncNotifyOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 400
-   * EnetChannelId: 0
-   * EnetIsReliable: false
-   * IsAllowClient: true
+   * CmdId: 309
+   * Obf: CAIOLKOIKNI
    * </pre>
    *
    * Protobuf type {@code EntityAiSyncNotify}
@@ -123,7 +121,7 @@ public final class EntityAiSyncNotifyOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.AiSyncInfoOuterClass.AiSyncInfo.parser(), extensionRegistry));
               break;
             }
-            case 120: {
+            case 64: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 localAvatarAlertedMonsterList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -131,7 +129,7 @@ public final class EntityAiSyncNotifyOuterClass {
               localAvatarAlertedMonsterList_.addInt(input.readUInt32());
               break;
             }
-            case 122: {
+            case 66: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -182,10 +180,10 @@ public final class EntityAiSyncNotifyOuterClass {
               emu.grasscutter.net.proto.EntityAiSyncNotifyOuterClass.EntityAiSyncNotify.class, emu.grasscutter.net.proto.EntityAiSyncNotifyOuterClass.EntityAiSyncNotify.Builder.class);
     }
 
-    public static final int LOCAL_AVATAR_ALERTED_MONSTER_LIST_FIELD_NUMBER = 15;
+    public static final int LOCAL_AVATAR_ALERTED_MONSTER_LIST_FIELD_NUMBER = 8;
     private com.google.protobuf.Internal.IntList localAvatarAlertedMonsterList_;
     /**
-     * <code>repeated uint32 local_avatar_alerted_monster_list = 15;</code>
+     * <code>repeated uint32 local_avatar_alerted_monster_list = 8;</code>
      * @return A list containing the localAvatarAlertedMonsterList.
      */
     @java.lang.Override
@@ -194,14 +192,14 @@ public final class EntityAiSyncNotifyOuterClass {
       return localAvatarAlertedMonsterList_;
     }
     /**
-     * <code>repeated uint32 local_avatar_alerted_monster_list = 15;</code>
+     * <code>repeated uint32 local_avatar_alerted_monster_list = 8;</code>
      * @return The count of localAvatarAlertedMonsterList.
      */
     public int getLocalAvatarAlertedMonsterListCount() {
       return localAvatarAlertedMonsterList_.size();
     }
     /**
-     * <code>repeated uint32 local_avatar_alerted_monster_list = 15;</code>
+     * <code>repeated uint32 local_avatar_alerted_monster_list = 8;</code>
      * @param index The index of the element to return.
      * @return The localAvatarAlertedMonsterList at the given index.
      */
@@ -269,7 +267,7 @@ public final class EntityAiSyncNotifyOuterClass {
         output.writeMessage(1, infoList_.get(i));
       }
       if (getLocalAvatarAlertedMonsterListList().size() > 0) {
-        output.writeUInt32NoTag(122);
+        output.writeUInt32NoTag(66);
         output.writeUInt32NoTag(localAvatarAlertedMonsterListMemoizedSerializedSize);
       }
       for (int i = 0; i < localAvatarAlertedMonsterList_.size(); i++) {
@@ -437,10 +435,8 @@ public final class EntityAiSyncNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 400
-     * EnetChannelId: 0
-     * EnetIsReliable: false
-     * IsAllowClient: true
+     * CmdId: 309
+     * Obf: CAIOLKOIKNI
      * </pre>
      *
      * Protobuf type {@code EntityAiSyncNotify}
@@ -652,7 +648,7 @@ public final class EntityAiSyncNotifyOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 local_avatar_alerted_monster_list = 15;</code>
+       * <code>repeated uint32 local_avatar_alerted_monster_list = 8;</code>
        * @return A list containing the localAvatarAlertedMonsterList.
        */
       public java.util.List<java.lang.Integer>
@@ -661,14 +657,14 @@ public final class EntityAiSyncNotifyOuterClass {
                  java.util.Collections.unmodifiableList(localAvatarAlertedMonsterList_) : localAvatarAlertedMonsterList_;
       }
       /**
-       * <code>repeated uint32 local_avatar_alerted_monster_list = 15;</code>
+       * <code>repeated uint32 local_avatar_alerted_monster_list = 8;</code>
        * @return The count of localAvatarAlertedMonsterList.
        */
       public int getLocalAvatarAlertedMonsterListCount() {
         return localAvatarAlertedMonsterList_.size();
       }
       /**
-       * <code>repeated uint32 local_avatar_alerted_monster_list = 15;</code>
+       * <code>repeated uint32 local_avatar_alerted_monster_list = 8;</code>
        * @param index The index of the element to return.
        * @return The localAvatarAlertedMonsterList at the given index.
        */
@@ -676,7 +672,7 @@ public final class EntityAiSyncNotifyOuterClass {
         return localAvatarAlertedMonsterList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 local_avatar_alerted_monster_list = 15;</code>
+       * <code>repeated uint32 local_avatar_alerted_monster_list = 8;</code>
        * @param index The index to set the value at.
        * @param value The localAvatarAlertedMonsterList to set.
        * @return This builder for chaining.
@@ -689,7 +685,7 @@ public final class EntityAiSyncNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 local_avatar_alerted_monster_list = 15;</code>
+       * <code>repeated uint32 local_avatar_alerted_monster_list = 8;</code>
        * @param value The localAvatarAlertedMonsterList to add.
        * @return This builder for chaining.
        */
@@ -700,7 +696,7 @@ public final class EntityAiSyncNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 local_avatar_alerted_monster_list = 15;</code>
+       * <code>repeated uint32 local_avatar_alerted_monster_list = 8;</code>
        * @param values The localAvatarAlertedMonsterList to add.
        * @return This builder for chaining.
        */
@@ -713,7 +709,7 @@ public final class EntityAiSyncNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 local_avatar_alerted_monster_list = 15;</code>
+       * <code>repeated uint32 local_avatar_alerted_monster_list = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearLocalAvatarAlertedMonsterList() {
@@ -1031,7 +1027,7 @@ public final class EntityAiSyncNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\030EntityAiSyncNotify.proto\032\020AiSyncInfo.p" +
       "roto\"_\n\022EntityAiSyncNotify\022)\n!local_avat" +
-      "ar_alerted_monster_list\030\017 \003(\r\022\036\n\tinfo_li" +
+      "ar_alerted_monster_list\030\010 \003(\r\022\036\n\tinfo_li" +
       "st\030\001 \003(\0132\013.AiSyncInfoB\033\n\031emu.grasscutter" +
       ".net.protob\006proto3"
     };

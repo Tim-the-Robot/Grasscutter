@@ -77,6 +77,10 @@ public final class BlossomChestInfoOuterClass {
     int getRefreshId();
   }
   /**
+   * <pre>
+   * Obf: ADMOGMEBELJ
+   * </pre>
+   *
    * Protobuf type {@code BlossomChestInfo}
    */
   public static final class BlossomChestInfo extends
@@ -568,6 +572,10 @@ public final class BlossomChestInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Obf: ADMOGMEBELJ
+     * </pre>
+     *
      * Protobuf type {@code BlossomChestInfo}
      */
     public static final class Builder extends
